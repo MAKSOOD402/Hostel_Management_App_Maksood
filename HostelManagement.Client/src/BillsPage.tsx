@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import PayBillButton from "./PayBillButton";
 import BillDetailsButton from "./BillDetailsButton";
+import ManualPaymentButton from "./ManualPaymentButton";
 
 interface Bill {
   id: number;
@@ -356,7 +357,28 @@ export default function BillsPage({
             <div className="bill-card-top"><div className="bill-icon">₹</div><span className={`bill-status ${statusClass}`}>{overdue ? "Overdue" : bill.status}</span></div>
             <div className="bill-card-title"><div><h3>{bill.tenantName}</h3><p>{bill.billNumber}</p></div><strong>{formatMoney(bill.totalAmount)}</strong></div>
             <div className="bill-card-period"><span>{new Date(`${bill.periodStart}T00:00:00`).toLocaleDateString("en-IN", { month: "short", year: "numeric" })}</span><span>Due {new Date(`${bill.dueDate}T00:00:00`).toLocaleDateString("en-IN", { day: "2-digit", month: "short" })}</span></div>
-            <div className="bill-card-actions"><BillDetailsButton hostelId={hostelId} billId={bill.id} accessToken={accessToken} />{!['paid','cancelled','draft'].includes(bill.status.toLowerCase()) && <PayBillButton hostelId={hostelId} billId={bill.id} accessToken={accessToken} />}</div>
+            <div className="bill-card-actions">
+              <BillDetailsButton
+                hostelId={hostelId}
+                billId={bill.id}
+                accessToken={accessToken}
+              />
+              {!['paid', 'cancelled', 'draft'].includes(bill.status.toLowerCase()) && (
+                <>
+                  <PayBillButton
+                    hostelId={hostelId}
+                    billId={bill.id}
+                    accessToken={accessToken}
+                  />
+                  <ManualPaymentButton
+                    hostelId={hostelId}
+                    billId={bill.id}
+                    accessToken={accessToken}
+                    onRecorded={() => void loadBills()}
+                  />
+                </>
+              )}
+            </div>
           </article>;
         })}</div>
       )}
@@ -381,3 +403,4 @@ export default function BillsPage({
     </section>
   );
 }
+
