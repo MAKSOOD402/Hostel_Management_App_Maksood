@@ -145,8 +145,8 @@ export default function ReportsPage({
   }
 
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Reports</h2>
+    <section className="hm-page reports-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">INSIGHTS</span><h2>Reports</h2><p>Occupancy and collection summary.</p></div></header>
 
       <form onSubmit={applyDateRange}>
         <label>
@@ -181,7 +181,7 @@ export default function ReportsPage({
             {report.period.fromDate} to {report.period.toDate}
           </h3>
 
-          <div
+          <div className="report-metrics"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
@@ -189,44 +189,44 @@ export default function ReportsPage({
               margin: "20px 0",
             }}
           >
-            <article>
+            <article className="report-metric">
               <h4>Active tenants</h4>
               <p>{report.activeTenantCount}</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Active rooms</h4>
               <p>{report.activeRoomCount}</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Occupied beds / capacity</h4>
               <p>
                 {report.occupiedBeds} / {report.totalCapacity}
               </p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Vacant rooms</h4>
               <p>{report.vacantRooms}</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Occupancy</h4>
               <p>{report.occupancyPercentage}%</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Billed in period</h4>
               <p>{formatMoney(report.billedAmount)}</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Collected in period</h4>
               <p>{formatMoney(report.collectedAmount)}</p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Outstanding bills</h4>
               <p>
                 {report.outstandingBillCount} ·{" "}
@@ -234,7 +234,7 @@ export default function ReportsPage({
               </p>
             </article>
 
-            <article>
+            <article className="report-metric">
               <h4>Overdue bills</h4>
               <p>
                 {report.overdueCount} · {formatMoney(report.overdueAmount)}

@@ -203,17 +203,17 @@ export default function TenantPortalPage({
   }
 
   return (
-    <main>
-      <h1>Tenant Portal</h1>
+    <main className="hm-page tenant-portal-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">YOUR ACCOUNT</span><h2>Tenant Portal</h2><p>Bills, requests, and hostel updates.</p></div></header>
 
-      <nav aria-label="Tenant portal navigation">
-        <button type="button" onClick={() => setActiveTab("bills")}>
+      <nav className="portal-tabs" aria-label="Tenant portal navigation">
+        <button className={activeTab === "bills" ? "active" : ""} type="button" onClick={() => setActiveTab("bills")}>
           My bills
         </button>
-        <button type="button" onClick={() => setActiveTab("complaints")}>
+        <button className={activeTab === "complaints" ? "active" : ""} type="button" onClick={() => setActiveTab("complaints")}>
           My complaints
         </button>
-        <button type="button" onClick={() => setActiveTab("notifications")}>
+        <button className={activeTab === "notifications" ? "active" : ""} type="button" onClick={() => setActiveTab("notifications")}>
           Notifications
         </button>
       </nav>

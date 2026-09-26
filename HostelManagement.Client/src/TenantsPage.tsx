@@ -66,6 +66,9 @@ export default function TenantsPage({
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [editingTenantId, setEditingTenantId] = useState<number | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [statusFilter, setStatusFilter] = useState<"All" | "Active" | "Inactive">("All");
 
   const [fullName, setFullName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -119,7 +122,15 @@ export default function TenantsPage({
     void loadTenants();
   }, [hostelId, accessToken, includeInactive]);
 
+  function startCreating() {
+    clearForm();
+    setIsFormOpen(true);
+    setError("");
+    setMessage("");
+  }
+
   function clearForm() {
+    setIsFormOpen(false);
     setEditingTenantId(null);
     setFullName("");
     setPhoneNumber("");
@@ -133,6 +144,7 @@ export default function TenantsPage({
 
   function startEditing(tenant: Tenant) {
     setEditingTenantId(tenant.id);
+    setIsFormOpen(true);
     setFullName(tenant.fullName);
     setPhoneNumber(tenant.phoneNumber);
     setEmail(tenant.email ?? "");
@@ -270,219 +282,157 @@ export default function TenantsPage({
     }
   }
 
-  return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Tenants</h2>
+  const activeCount = tenants.filter((tenant) => tenant.isActive).length;
+  const inactiveCount = tenants.length - activeCount;
+  const visibleTenants = tenants.filter((tenant) => {
+    const term = searchText.trim().toLowerCase();
+    const matchesSearch = !term || [
+      tenant.fullName,
+      tenant.phoneNumber,
+      tenant.email ?? "",
+      tenant.roomNumber ?? "",
+    ].some((value) => value.toLowerCase().includes(term));
+    const matchesStatus = statusFilter === "All"
+      || (statusFilter === "Active" && tenant.isActive)
+      || (statusFilter === "Inactive" && !tenant.isActive);
+    return matchesSearch && matchesStatus;
+  });
 
-      {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}
+  return (
+    <section className="tenants-page">
+      <div className="tenant-page-heading">
+        <div>
+          <span className="eyebrow">PEOPLE</span>
+          <h2>Tenants</h2>
+          <p>Manage residents and their room assignments.</p>
+        </div>
+        <span className="tenant-total-count">{activeCount}<small> active</small></span>
+      </div>
+
+      {error && <p role="alert">{error}</p>}
       {message && <p role="status">{message}</p>}
 
-      <form onSubmit={saveTenant}>
-        <h3>{editingTenantId !== null ? "Edit tenant" : "Add tenant"}</h3>
+      <label className="tenant-search">
+        <span aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          placeholder="Search tenants..."
+          value={searchText}
+          onChange={(event) => setSearchText(event.target.value)}
+          aria-label="Search tenants"
+        />
+        <span className="search-filter-icon" aria-hidden="true">☷</span>
+      </label>
 
-        <label>
-          Full name
-          <input
-            required
-            minLength={2}
-            maxLength={150}
-            value={fullName}
-            onChange={(event) => setFullName(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Phone number
-          <input
-            required
-            maxLength={30}
-            value={phoneNumber}
-            onChange={(event) => setPhoneNumber(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Email
-          <input
-            type="email"
-            maxLength={254}
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Emergency contact name
-          <input
-            maxLength={150}
-            value={emergencyName}
-            onChange={(event) => setEmergencyName(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Emergency contact phone
-          <input
-            maxLength={30}
-            value={emergencyPhone}
-            onChange={(event) => setEmergencyPhone(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Move-in date
-          <input
-            type="date"
-            required
-            value={moveInDate}
-            onChange={(event) => setMoveInDate(event.target.value)}
-          />
-        </label>
-
-        {editingTenantId !== null && (
-          <label>
-            Move-out date
-            <input
-              type="date"
-              value={moveOutDate}
-              onChange={(event) => setMoveOutDate(event.target.value)}
-            />
-          </label>
-        )}
-
-        {editingTenantId === null && (
-          <label>
-            Room (optional)
-            <select
-              value={roomId}
-              onChange={(event) => setRoomId(event.target.value)}
-            >
-              <option value="">No room assigned</option>
-              {rooms.map((room) => (
-                <option key={room.id} value={room.id}>
-                  {room.roomNumber}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-
-        <button type="submit" disabled={saving}>
-          {saving
-            ? "Saving..."
-            : editingTenantId !== null
-              ? "Save changes"
-              : "Add tenant"}
-        </button>
-
-        {editingTenantId !== null && (
-          <button type="button" onClick={clearForm}>
-            Cancel edit
+      <div className="tenant-filter-tabs" role="tablist" aria-label="Filter tenants">
+        {([
+          { name: "All", count: tenants.length },
+          { name: "Active", count: activeCount },
+          { name: "Inactive", count: inactiveCount },
+        ] as const).map((filter) => (
+          <button
+            key={filter.name}
+            type="button"
+            role="tab"
+            aria-selected={statusFilter === filter.name}
+            className={statusFilter === filter.name ? "selected" : ""}
+            onClick={() => setStatusFilter(filter.name)}
+          >
+            {filter.name} <span>{filter.count}</span>
           </button>
-        )}
-      </form>
+        ))}
+      </div>
 
-      <label style={{ display: "block", margin: "24px 0" }}>
+      <label className="inactive-toggle">
         <input
           type="checkbox"
           checked={includeInactive}
           onChange={(event) => setIncludeInactive(event.target.checked)}
         />
-        {" "}Include inactive tenants
+        Show inactive tenants
       </label>
 
       {loading ? (
-        <p>Loading tenants...</p>
+        <div className="tenant-list-state">Loading tenants…</div>
       ) : tenants.length === 0 ? (
-        <p>No tenants found.</p>
+        <div className="tenant-list-state"><strong>No tenants yet</strong><span>Add a tenant to see them in this list.</span></div>
+      ) : visibleTenants.length === 0 ? (
+        <div className="tenant-list-state"><strong>No matching tenants</strong><span>Try another name, phone number, or status filter.</span></div>
       ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Room</th>
-              <th>Move-in</th>
-              <th>Status</th>
-              <th>Assign room</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tenants.map((tenant) => (
-              <tr key={tenant.id}>
-                <td>{tenant.id}</td>
-                <td>{tenant.fullName}</td>
-                <td>{tenant.phoneNumber}</td>
-                <td>{tenant.email || "—"}</td>
-                <td>{tenant.roomNumber || "Unassigned"}</td>
-                <td>{tenant.moveInDate}</td>
-                <td>{tenant.isActive ? "Active" : "Inactive"}</td>
-                <td>
-                  {tenant.isActive && (
-                    <>
-                      <select
-                        aria-label={`Room for ${tenant.fullName}`}
-                        value={roomIds[tenant.id] ?? ""}
-                        onChange={(event) =>
-                          setRoomIds((current) => ({
-                            ...current,
-                            [tenant.id]: event.target.value,
-                          }))
-                        }
-                      >
-                        <option value="">Choose room</option>
-                        {rooms.map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {room.roomNumber}
-                          </option>
-                        ))}
-                      </select>
-                      <button
-                        type="button"
-                        onClick={() => void assignRoom(tenant)}
-                      >
-                        Assign
-                      </button>
-                    </>
-                  )}
-                </td>
-               <td>
-  <button type="button" onClick={() => startEditing(tenant)}>
-    Edit
-  </button>{" "}
+        <div className="tenant-card-list">
+          {visibleTenants.map((tenant) => {
+            const initials = tenant.fullName.trim().split(/\s+/).slice(0, 2).map((part) => part[0]?.toUpperCase() ?? "").join("");
+            return (
+              <article className="tenant-list-card" key={tenant.id}>
+                <div className="tenant-card-main">
+                  <span className={`tenant-avatar avatar-${tenant.id % 6}`} aria-hidden="true">{initials}</span>
+                  <div className="tenant-card-identity">
+                    <strong>{tenant.fullName}</strong>
+                    <span>{tenant.roomNumber ? `Room ${tenant.roomNumber}` : "No room assigned"}</span>
+                  </div>
+                  <span className={`tenant-status ${tenant.isActive ? "active" : "inactive"}`}>
+                    {tenant.isActive ? "Active" : "Inactive"}
+                  </span>
+                  <details className="tenant-card-menu">
+                    <summary aria-label={`Manage ${tenant.fullName}`} title="Tenant actions">⋮</summary>
+                    <div className="tenant-menu-panel">
+                      <TenantProfileButton hostelId={hostelId} tenantId={tenant.id} accessToken={accessToken} onEdit={() => startEditing(tenant)} />
+                      <button type="button" onClick={() => startEditing(tenant)}>Edit details</button>
+                      {tenant.isActive && <button type="button" onClick={() => void deactivateTenant(tenant)}>Deactivate</button>}
+                      {isAdmin && <CreateTenantAccountButton hostelId={hostelId} tenantId={tenant.id} tenantName={tenant.fullName} tenantEmail={tenant.email} accessToken={accessToken} />}
+                    
+                      <details className="tenant-room-assignment">
+                  <summary>{tenant.roomNumber ? "Change room" : "Assign a room"}</summary>
+                  <div>
+                    <select
+                      aria-label={`Room for ${tenant.fullName}`}
+                      value={roomIds[tenant.id] ?? ""}
+                      onChange={(event) => setRoomIds((current) => ({ ...current, [tenant.id]: event.target.value }))}
+                    >
+                      <option value="">Choose room</option>
+                      {rooms.map((room) => <option key={room.id} value={room.id}>{room.roomNumber}</option>)}
+                    </select>
+                    <button type="button" onClick={() => void assignRoom(tenant)}>Assign</button>
+                  </div>
+                </details>
+                    </div>
+                  </details>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
 
-  {tenant.isActive && (
-    <button
-      type="button"
-      onClick={() => void deactivateTenant(tenant)}
-    >
-      Deactivate
-    </button>
-  )}{" "}
+      <button className="tenant-add-fab" type="button" onClick={startCreating} aria-label="Add tenant" title="Add tenant">+</button>
 
-  {isAdmin && (
-    <CreateTenantAccountButton
-      hostelId={hostelId}
-      tenantId={tenant.id}
-      tenantName={tenant.fullName}
-      tenantEmail={tenant.email}
-      accessToken={accessToken}
-    />
-  )}
-  <TenantProfileButton
-  hostelId={hostelId}
-  tenantId={tenant.id}
-  accessToken={accessToken}
-/>
-</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {isFormOpen && (
+        <div className="tenant-dialog-backdrop">
+          <section className="tenant-dialog" role="dialog" aria-modal="true" aria-labelledby="tenant-form-title">
+            <div className="tenant-dialog-heading">
+              <div><span className="eyebrow">TENANT DETAILS</span><h2 id="tenant-form-title">{editingTenantId !== null ? "Edit tenant" : "Add tenant"}</h2></div>
+              <button className="tenant-dialog-close" type="button" onClick={clearForm} aria-label="Close">×</button>
+            </div>
+            <form className="tenant-form" onSubmit={saveTenant}>
+              <label>Full name<input required minLength={2} maxLength={150} value={fullName} onChange={(event) => setFullName(event.target.value)} /></label>
+              <label>Phone number<input required maxLength={30} value={phoneNumber} onChange={(event) => setPhoneNumber(event.target.value)} /></label>
+              <label>Email<input type="email" maxLength={254} value={email} onChange={(event) => setEmail(event.target.value)} /></label>
+              <label>Emergency contact name<input maxLength={150} value={emergencyName} onChange={(event) => setEmergencyName(event.target.value)} /></label>
+              <label>Emergency contact phone<input maxLength={30} value={emergencyPhone} onChange={(event) => setEmergencyPhone(event.target.value)} /></label>
+              <label>Move-in date<input type="date" required value={moveInDate} onChange={(event) => setMoveInDate(event.target.value)} /></label>
+              {editingTenantId !== null && <label>Move-out date<input type="date" value={moveOutDate} onChange={(event) => setMoveOutDate(event.target.value)} /></label>}
+              {editingTenantId === null && <label>Room (optional)<select value={roomId} onChange={(event) => setRoomId(event.target.value)}><option value="">No room assigned</option>{rooms.map((room) => <option key={room.id} value={room.id}>{room.roomNumber}</option>)}</select></label>}
+              <div className="tenant-form-actions">
+                <button className="tenant-cancel-button" type="button" onClick={clearForm}>Cancel</button>
+                <button className="primary-button" type="submit" disabled={saving}>{saving ? "Saving…" : editingTenantId !== null ? "Save changes" : "Add tenant"}</button>
+              </div>
+            </form>
+          </section>
+        </div>
       )}
     </section>
   );
 }
+
+
+

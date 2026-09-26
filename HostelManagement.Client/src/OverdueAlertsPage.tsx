@@ -117,12 +117,13 @@ export default function OverdueAlertsPage({
   );
 
   return (
-    <section>
-      <h2>Overdue alerts</h2>
+    <section className="hm-page overdue-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">COLLECTIONS</span><h2>Overdue alerts</h2><p>Follow up on pending rent payments.</p></div></header>
+      <div className="overdue-summary">
       <p>
         {bills.length} overdue bill(s) · Total billed{" "}
         {formatMoney(overdueTotal)}
-      </p>
+      </p></div>
 
       {error && <p role="alert">{error}</p>}
       {loading && <p>Loading overdue bills...</p>}

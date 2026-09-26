@@ -11,6 +11,12 @@ interface Room {
   isActive: boolean;
 }
 
+interface RoomOccupant {
+  roomId: number | null;
+  fullName: string;
+  isActive: boolean;
+}
+
 interface RoomsPageProps {
   hostelId: number;
   accessToken: string;
@@ -39,6 +45,9 @@ export default function RoomsPage({
   accessToken,
 }: RoomsPageProps) {
   const [rooms, setRooms] = useState<Room[]>([]);
+  const [occupants, setOccupants] = useState<RoomOccupant[]>([]);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [roomFilter, setRoomFilter] = useState<"All" | "Occupied" | "Vacant" | "Inactive">("All");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
@@ -55,21 +64,17 @@ export default function RoomsPage({
     setError("");
 
     try {
-      const response = await fetch(
-        `${apiBaseUrl}/api/hostels/${hostelId}/rooms`,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error(await readError(response));
-      }
-
-      const data: Room[] = await response.json();
-      setRooms(data);
+      const headers = { Authorization: `Bearer ${accessToken}` };
+      const [roomsResponse, tenantsResponse] = await Promise.all([
+        fetch(`${apiBaseUrl}/api/hostels/${hostelId}/rooms`, { headers }),
+        fetch(`${apiBaseUrl}/api/hostels/${hostelId}/tenants`, { headers }),
+      ]);
+      if (!roomsResponse.ok) throw new Error(await readError(roomsResponse));
+      if (!tenantsResponse.ok) throw new Error(await readError(tenantsResponse));
+      const roomData: Room[] = await roomsResponse.json();
+      const tenantData: RoomOccupant[] = await tenantsResponse.json();
+      setRooms(roomData);
+      setOccupants(tenantData.filter((tenant) => tenant.isActive && tenant.roomId !== null));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not load rooms.");
     } finally {
@@ -81,7 +86,15 @@ export default function RoomsPage({
     void loadRooms();
   }, [hostelId, accessToken]);
 
+  function startCreating() {
+    clearForm();
+    setIsFormOpen(true);
+    setError("");
+    setMessage("");
+  }
+
   function clearForm() {
+    setIsFormOpen(false);
     setEditingRoom(null);
     setRoomNumber("");
     setCapacity("1");
@@ -90,6 +103,7 @@ export default function RoomsPage({
   }
 
   function startEditing(room: Room) {
+    setIsFormOpen(true);
     setEditingRoom(room);
     setRoomNumber(room.roomNumber);
     setCapacity(String(room.capacity));
@@ -223,115 +237,58 @@ export default function RoomsPage({
     }
   }
 
+  const occupiedCount = (roomId: number) => occupants.filter((tenant) => tenant.roomId === roomId).length;
+  const activeRooms = rooms.filter((room) => room.isActive);
+  const occupiedRooms = activeRooms.filter((room) => occupiedCount(room.id) > 0).length;
+  const vacantRooms = activeRooms.filter((room) => occupiedCount(room.id) < room.capacity).length;
+  const visibleRooms = rooms.filter((room) => {
+    if (roomFilter === "Inactive") return !room.isActive;
+    if (!room.isActive) return false;
+    if (roomFilter === "Occupied") return occupiedCount(room.id) > 0;
+    if (roomFilter === "Vacant") return occupiedCount(room.id) < room.capacity;
+    return true;
+  });
+
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Rooms</h2>
-
-      {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}
-      {message && <p role="status">{message}</p>}
-
-      <form onSubmit={saveRoom}>
-        <h3>{editingRoom ? "Edit room" : "Add room"}</h3>
-
-        <label>
-          Room number
-          <input
-            required
-            maxLength={30}
-            value={roomNumber}
-            onChange={(event) => setRoomNumber(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Capacity
-          <input
-            type="number"
-            required
-            min="1"
-            value={capacity}
-            onChange={(event) => setCapacity(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Floor number
-          <input
-            type="number"
-            value={floorNumber}
-            onChange={(event) => setFloorNumber(event.target.value)}
-          />
-        </label>
-
-        <label>
-          Notes
-          <input
-            maxLength={500}
-            value={notes}
-            onChange={(event) => setNotes(event.target.value)}
-          />
-        </label>
-
-        <button type="submit" disabled={saving}>
-          {saving ? "Saving..." : editingRoom ? "Save changes" : "Add room"}
-        </button>
-
-        {editingRoom && (
-          <button type="button" onClick={clearForm}>
-            Cancel edit
-          </button>
-        )}
-      </form>
-
-      {loading ? (
-        <p>Loading rooms...</p>
-      ) : rooms.length === 0 ? (
-        <p>No rooms found.</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Room</th>
-              <th>Capacity</th>
-              <th>Floor</th>
-              <th>Notes</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rooms.map((room) => (
-              <tr key={room.id}>
-                <td>{room.roomNumber}</td>
-                <td>{room.capacity}</td>
-                <td>{room.floorNumber ?? "—"}</td>
-                <td>{room.notes || "—"}</td>
-                <td>{room.isActive ? "Active" : "Inactive"}</td>
-                <td>
-                  <button type="button" onClick={() => startEditing(room)}>
-                    Edit
-                  </button>{" "}
-                  {room.isActive ? (
-                    <button
-                      type="button"
-                      onClick={() => void deactivateRoom(room)}
-                    >
-                      Deactivate
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => void setRoomActive(room, true)}
-                    >
-                      Reactivate
-                    </button>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <section className="rooms-page">
+      <div className="room-page-heading"><div><span className="eyebrow">HOSTEL SPACE</span><h2>Rooms</h2><p>Room availability and occupancy</p></div><span className="room-count-badge">{activeRooms.length}<small> rooms</small></span></div>
+      {error && <p role="alert">{error}</p>}{message && <p role="status">{message}</p>}
+      <div className="room-summary-strip"><span><b>{occupiedRooms}</b> occupied</span><i/><span><b>{vacantRooms}</b> with vacancies</span><i/><span><b>{activeRooms.reduce((sum, room) => sum + room.capacity, 0)}</b> beds</span></div>
+      <div className="room-filter-tabs" role="tablist" aria-label="Filter rooms">
+        {([
+          { name: "All", count: activeRooms.length },
+          { name: "Occupied", count: occupiedRooms },
+          { name: "Vacant", count: vacantRooms },
+          { name: "Inactive", count: rooms.length - activeRooms.length },
+        ] as const).map((filter) => <button key={filter.name} type="button" role="tab" aria-selected={roomFilter === filter.name} className={roomFilter === filter.name ? "selected" : ""} onClick={() => setRoomFilter(filter.name)}>{filter.name}<span>{filter.count}</span></button>)}
+      </div>
+      {loading ? <div className="room-empty-state">Loading rooms…</div> : visibleRooms.length === 0 ? <div className="room-empty-state"><strong>No rooms in this filter</strong><span>Add a room or choose another category.</span></div> : (
+        <div className="room-card-grid">
+          {visibleRooms.map((room) => {
+            const assigned = occupants.filter((tenant) => tenant.roomId === room.id);
+            const occupied = assigned.length;
+            const status = !room.isActive ? "Inactive" : occupied > 0 ? "Occupied" : "Vacant";
+            return <article className="room-card" key={room.id}>
+              <div className="room-card-top"><span className="room-door-icon">⌂</span><span className={`room-status-chip ${status.toLowerCase()}`}>{status}</span></div>
+              <h3>{room.roomNumber}</h3>
+              <p className="room-floor-label">{room.floorNumber === null ? "Floor not set" : `Floor ${room.floorNumber}`}</p>
+              <div className="room-bed-meter"><div><span>Beds</span><b>{occupied} / {room.capacity}</b></div><span className="room-meter-track"><i style={{ width: `${Math.min(100, occupied / room.capacity * 100)}%` }}/></span></div>
+              <div className="room-occupants">{assigned.length ? assigned.map((tenant) => <span key={`${room.id}-${tenant.fullName}`} className="room-occupant-pill">{tenant.fullName}</span>) : <span className="room-empty-copy">No tenants assigned</span>}</div>
+              {room.notes && <p className="room-note">{room.notes}</p>}
+              <div className="room-card-actions"><button type="button" onClick={() => startEditing(room)}>Edit room</button>{room.isActive ? <button className="room-secondary-action" type="button" onClick={() => void deactivateRoom(room)}>Deactivate</button> : <button className="room-secondary-action" type="button" onClick={() => void setRoomActive(room, true)}>Reactivate</button>}</div>
+            </article>;
+          })}
+        </div>
       )}
+      <button className="tenant-add-fab" type="button" onClick={startCreating} aria-label="Add room" title="Add room">+</button>
+      {isFormOpen && <div className="tenant-dialog-backdrop"><section className="tenant-dialog" role="dialog" aria-modal="true" aria-labelledby="room-form-title"><div className="tenant-dialog-heading"><div><span className="eyebrow">ROOM DETAILS</span><h2 id="room-form-title">{editingRoom ? "Edit room" : "Add room"}</h2></div><button className="tenant-dialog-close" type="button" onClick={clearForm} aria-label="Close">×</button></div><form className="tenant-form" onSubmit={saveRoom}>
+        <label>Room number<input required maxLength={30} value={roomNumber} onChange={(event) => setRoomNumber(event.target.value)} /></label>
+        <label>Capacity<input type="number" required min="1" value={capacity} onChange={(event) => setCapacity(event.target.value)} /></label>
+        <label>Floor number<input type="number" value={floorNumber} onChange={(event) => setFloorNumber(event.target.value)} /></label>
+        <label>Notes<input maxLength={500} value={notes} onChange={(event) => setNotes(event.target.value)} /></label>
+        <div className="tenant-form-actions"><button className="tenant-cancel-button" type="button" onClick={clearForm}>Cancel</button><button className="primary-button" type="submit" disabled={saving}>{saving ? "Saving…" : editingRoom ? "Save changes" : "Add room"}</button></div>
+      </form></section></div>}
     </section>
   );
 }
+

@@ -143,8 +143,8 @@ export default function HostelProfilePage({
   if (loading) return <p>Loading hostel profile...</p>;
 
   return (
-    <section>
-      <h2>Hostel profile</h2>
+    <section className="hm-page settings-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">ADMINISTRATION</span><h2>Hostel profile</h2><p>Contact information and local settings.</p></div></header>
 
       {error && <p role="alert">{error}</p>}
       {message && <p role="status">{message}</p>}

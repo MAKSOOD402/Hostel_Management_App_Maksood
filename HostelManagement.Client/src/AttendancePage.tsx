@@ -202,77 +202,12 @@ export default function AttendancePage({
   }
 
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Attendance</h2>
-
-      <label>
-        Attendance date
-        <input
-          type="date"
-          value={date}
-          onChange={(event) => setDate(event.target.value)}
-        />
-      </label>
-
-      {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}
-      {message && <p role="status">{message}</p>}
-
-      {loading ? (
-        <p>Loading attendance...</p>
-      ) : rows.length === 0 ? (
-        <p>No active tenants found.</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Tenant</th>
-              <th>Status</th>
-              <th>Notes</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row) => (
-              <tr key={row.tenantId}>
-                <td>{row.tenantName}</td>
-                <td>
-                  <select
-                    value={row.status}
-                    onChange={(event) =>
-                      updateRow(row.tenantId, { status: event.target.value })
-                    }
-                  >
-                    <option value="">Choose status</option>
-                    {attendanceStatuses.map((status) => (
-                      <option key={status} value={status}>
-                        {status}
-                      </option>
-                    ))}
-                  </select>
-                </td>
-                <td>
-                  <input
-                    maxLength={500}
-                    value={row.notes}
-                    onChange={(event) =>
-                      updateRow(row.tenantId, { notes: event.target.value })
-                    }
-                  />
-                </td>
-                <td>
-                  <button
-                    type="button"
-                    disabled={savingTenantId === row.tenantId}
-                    onClick={() => void saveAttendance(row)}
-                  >
-                    {savingTenantId === row.tenantId ? "Saving..." : "Save"}
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+    <section className="hm-page attendance-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">PEOPLE</span><h2>Attendance</h2><p>Daily attendance for your residents.</p></div></header>
+      <div className="attendance-date-card"><label htmlFor="attendance-date">Select date</label><input id="attendance-date" type="date" value={date} onChange={(event) => setDate(event.target.value)} /><strong>{new Date(`${date}T12:00:00`).toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}</strong></div>
+      {error && <p role="alert" className="hm-alert-error">{error}</p>}{message && <p role="status" className="hm-inline-success">{message}</p>}
+      {!loading && rows.length > 0 && <div className="attendance-summary"><span>Present <b>{rows.filter((row) => row.status === "Present").length}</b></span><span>Absent <b>{rows.filter((row) => row.status === "Absent").length}</b></span><span>On leave <b>{rows.filter((row) => row.status === "Leave").length}</b></span></div>}
+      {loading ? <p className="hm-loading">Loading attendance...</p> : rows.length === 0 ? <p className="hm-empty">No active tenants found.</p> : <div className="attendance-list">{rows.map((row) => <article className="attendance-row" key={row.tenantId}><div className="hm-avatar">{row.tenantName.slice(0, 1).toUpperCase()}</div><div className="attendance-person"><strong>{row.tenantName}</strong><select aria-label={`Attendance for ${row.tenantName}`} value={row.status} onChange={(event) => updateRow(row.tenantId, { status: event.target.value })}><option value="">Set status</option>{attendanceStatuses.map((status) => <option key={status} value={status}>{status}</option>)}</select><input aria-label={`Notes for ${row.tenantName}`} placeholder="Add a note (optional)" maxLength={500} value={row.notes} onChange={(event) => updateRow(row.tenantId, { notes: event.target.value })} /></div><button className="hm-primary-button attendance-save" type="button" disabled={savingTenantId === row.tenantId} onClick={() => void saveAttendance(row)}>{savingTenantId === row.tenantId ? "Saving" : "Save"}</button></article>)}</div>}
     </section>
   );
 }

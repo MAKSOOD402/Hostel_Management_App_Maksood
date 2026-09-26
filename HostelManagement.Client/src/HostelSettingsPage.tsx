@@ -167,8 +167,8 @@ export default function HostelSettingsPage({
   }
 
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Hostel settings</h2>
+    <section className="hm-page settings-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">ADMINISTRATION</span><h2>Hostel settings</h2><p>Configure hostel-specific values.</p></div></header>
       <p>Values are stored as JSON. Only Admin users can access this screen.</p>
 
       {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}

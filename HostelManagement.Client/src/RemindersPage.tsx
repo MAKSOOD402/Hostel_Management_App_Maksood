@@ -199,8 +199,8 @@ export default function RemindersPage({
   }
 
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Bill reminders</h2>
+    <section className="hm-page reminders-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">COLLECTIONS</span><h2>Bill reminders</h2><p>Schedule and track payment follow-ups.</p></div></header>
 
       {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}
       {message && <p role="status">{message}</p>}

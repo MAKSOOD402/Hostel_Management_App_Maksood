@@ -157,8 +157,8 @@ export default function StaffAccountsPage({
   }
 
   return (
-    <section>
-      <h1>Staff Accounts</h1>
+    <section className="hm-page staff-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">ADMINISTRATION</span><h2>Staff accounts</h2><p>Create logins and manage hostel access.</p></div></header>
       <p>Create staff logins and manage access to this hostel.</p>
 
       {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}

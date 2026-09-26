@@ -225,8 +225,8 @@ export default function NotificationsPage({
   const totalPages = Math.max(1, Math.ceil(totalCount / pageSize));
 
   return (
-    <section style={{ marginTop: 32 }}>
-      <h2>Notifications</h2>
+    <section className="hm-page notifications-page">
+      <header className="hm-page-heading"><div><span className="hm-eyebrow">UPDATES</span><h2>Notifications</h2><p>Recent activity and reminders.</p></div></header>
 
       {error && <p role="alert" style={{ color: "crimson" }}>{error}</p>}
       {message && <p role="status">{message}</p>}
@@ -237,8 +237,8 @@ export default function NotificationsPage({
         <p>No active tenants found.</p>
       ) : (
         <>
-          <label>
-            Tenant
+          <label className="notification-tenant-picker">
+            Resident
             <select
               value={tenantId}
               onChange={(event) => {
@@ -255,18 +255,9 @@ export default function NotificationsPage({
             </select>
           </label>
 
-          <label style={{ display: "block", margin: "16px 0" }}>
-            <input
-              type="checkbox"
-              checked={unreadOnly}
-              onChange={(event) => {
-                setUnreadOnly(event.target.checked);
-                setPage(1);
-                setMessage("");
-              }}
-            />
-            {" "}Show unread only
-          </label>
+          <div className="notification-filters" role="group" aria-label="Notification filter">
+            {[false, true].map((unread) => <button key={String(unread)} type="button" className={unreadOnly === unread ? "active" : ""} onClick={() => { setUnreadOnly(unread); setPage(1); setMessage(""); }}>{unread ? "Unread" : "All notifications"}{unread && <span>{totalCount}</span>}</button>)}
+          </div>
 
           {loadingNotifications ? (
             <p>Loading notifications...</p>
@@ -274,39 +265,29 @@ export default function NotificationsPage({
             <p>No notifications found for this tenant.</p>
           ) : (
             <>
-              <ul>
+              <ul className="notification-list">
                 {notifications.map((notification) => (
                   <li
                     key={notification.id}
-                    style={{
-                      marginBottom: 16,
-                      fontWeight: notification.readAt ? "normal" : "bold",
-                    }}
+                    className={`notification-card ${notification.readAt ? "is-read" : "is-unread"}`}
                   >
-                    <strong>{notification.title}</strong>
-                    <p>{notification.message}</p>
-                    <small>
-                      {notification.channel} ·{" "}
-                      {new Date(notification.sentAt).toLocaleString()}
-                      {notification.billId !== null &&
-                        ` · Bill ID ${notification.billId}`}
-                    </small>
+                    <span className="notification-icon">{notification.billId !== null ? "₹" : "•"}</span><div className="notification-content"><div className="notification-title"><strong>{notification.title}</strong>{!notification.readAt && <i>New</i>}</div><p>{notification.message}</p><small>{notification.channel} · {new Date(notification.sentAt).toLocaleString()}{notification.billId !== null && ` · Bill ${notification.billId}`}</small>
 
                     {!notification.readAt && (
-                      <div>
-                        <button
+                      <div className="notification-actions">
+                        <button className="hm-text-button"
                           type="button"
                           onClick={() => void markAsRead(notification.id)}
                         >
                           Mark as read
                         </button>
                       </div>
-                    )}
+                    )}</div>
                   </li>
                 ))}
               </ul>
 
-              <div>
+              <div className="hm-pagination">
                 <button
                   type="button"
                   disabled={page <= 1}
