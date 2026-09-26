@@ -1,0 +1,13 @@
+.vs/
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.env*
+!**/.env.example
+HostelManagement.Api/appsettings.json
+**/appsettings.Development.json
+**/appsettings.*.json
+**/secrets.json
+*.user

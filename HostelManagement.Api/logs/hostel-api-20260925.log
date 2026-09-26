@@ -1,0 +1,392 @@
+2026-09-25 19:17:13.343 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 19:17:13.376 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 19:17:13.377 +05:30 [INF] Hosting environment: Development
+2026-09-25 19:17:13.381 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 19:18:10.819 +05:30 [INF] HTTP GET /swagger responded 301 in 29.9311 ms
+2026-09-25 19:18:10.965 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 70.0871 ms
+2026-09-25 19:26:17.175 +05:30 [INF] Application is shutting down...
+2026-09-25 21:08:06.226 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-09-25 21:08:06.271 +05:30 [INF] Applying migration '20260925153714_InitialPostgresSchema'.
+2026-09-25 21:11:16.278 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 21:11:16.321 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 21:11:16.323 +05:30 [INF] Hosting environment: Development
+2026-09-25 21:11:16.324 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 21:11:34.559 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 21:11:34.573 +05:30 [INF] HTTP GET //api/hostels responded 404 in 54.5343 ms
+2026-09-25 21:12:03.282 +05:30 [INF] HTTP GET /api/hostels responded 200 in 7449.4532 ms
+2026-09-25 21:14:17.602 +05:30 [WRN] As of ""2026-09-25T15:44:15.5178519+00:00"", the heartbeat has been running for ""00:00:01.1424802"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2026-09-25 21:14:58.204 +05:30 [ERR] HTTP POST /api/hostels responded 500 in 255.5180 ms
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateHostelRequest' has validation metadata defined on property 'Address' that will be ignored. 'Address' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 21:14:58.268 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateHostelRequest' has validation metadata defined on property 'Address' that will be ignored. 'Address' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-09-25 21:52:48.493 +05:30 [ERR] HTTP POST /api/hostels responded 500 in 134.3628 ms
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateHostelRequest' has validation metadata defined on property 'Address' that will be ignored. 'Address' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 21:52:48.585 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateHostelRequest' has validation metadata defined on property 'Address' that will be ignored. 'Address' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-09-25 21:58:06.621 +05:30 [INF] Application is shutting down...
+2026-09-25 21:59:41.754 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 21:59:41.789 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 21:59:41.792 +05:30 [INF] Hosting environment: Development
+2026-09-25 21:59:41.794 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:00:10.631 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 22:00:12.790 +05:30 [INF] Created hostel 1 named Green Valley Hostel
+2026-09-25 22:00:12.863 +05:30 [INF] HTTP POST /api/hostels responded 201 in 2257.4204 ms
+2026-09-25 22:01:02.986 +05:30 [INF] HTTP GET /api/hostels responded 200 in 508.6717 ms
+2026-09-25 22:03:19.901 +05:30 [INF] HTTP POST //api/hostels/1/rooms responded 404 in 8.2085 ms
+2026-09-25 22:03:35.195 +05:30 [INF] Created room 1 in hostel 1
+2026-09-25 22:03:35.214 +05:30 [INF] HTTP POST /api/hostels/1/rooms responded 201 in 416.0061 ms
+2026-09-25 22:04:04.077 +05:30 [INF] HTTP GET /api/hostels/1/rooms responded 200 in 38.7245 ms
+2026-09-25 22:06:32.657 +05:30 [INF] Application is shutting down...
+2026-09-25 22:06:45.705 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:06:45.753 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:06:45.758 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:06:45.760 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:08:39.065 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 22:08:41.638 +05:30 [INF] HTTP GET /api/hostels/1/tenants responded 200 in 2598.2218 ms
+2026-09-25 22:09:31.156 +05:30 [ERR] HTTP POST /api/hostels/1/tenants responded 500 in 138.0633 ms
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateTenantRequest' has validation metadata defined on property 'EmergencyPhone' that will be ignored. 'EmergencyPhone' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 22:09:31.188 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateTenantRequest' has validation metadata defined on property 'EmergencyPhone' that will be ignored. 'EmergencyPhone' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-09-25 22:10:22.505 +05:30 [ERR] HTTP POST /api/hostels/1/tenants responded 500 in 6.2990 ms
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateTenantRequest' has validation metadata defined on property 'EmergencyPhone' that will be ignored. 'EmergencyPhone' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 22:10:22.642 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Record type 'HostelManagement.Api.Controllers.CreateTenantRequest' has validation metadata defined on property 'EmergencyPhone' that will be ignored. 'EmergencyPhone' is a parameter in the record primary constructor and validation metadata must be associated with the constructor parameter.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata.ThrowIfRecordTypeHasValidationOnProperties()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.Enumerator..ctor(ModelMetadata modelMetadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.DefaultComplexObjectValidationStrategy.GetChildren(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-09-25 22:12:14.533 +05:30 [INF] Application is shutting down...
+2026-09-25 22:12:30.197 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:12:30.229 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:12:30.230 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:12:30.231 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:13:06.651 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 22:13:09.596 +05:30 [INF] Created tenant 1 for hostel 1
+2026-09-25 22:13:09.676 +05:30 [INF] HTTP POST /api/hostels/1/tenants responded 201 in 3048.4999 ms
+2026-09-25 22:13:34.943 +05:30 [INF] HTTP GET /api/hostels/1/tenants responded 200 in 169.0990 ms
+2026-09-25 22:21:20.424 +05:30 [INF] Application is shutting down...
+2026-09-25 22:21:34.149 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:21:34.185 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:21:34.187 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:21:34.188 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:23:28.677 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 22:23:30.701 +05:30 [INF] Created bill 1 for tenant 1 in hostel 1
+2026-09-25 22:23:30.761 +05:30 [INF] HTTP POST /api/hostels/1/bills responded 201 in 2105.7291 ms
+2026-09-25 22:23:54.647 +05:30 [INF] HTTP GET /api/hostels/1/bills responded 200 in 365.9907 ms
+2026-09-25 22:24:36.828 +05:30 [INF] HTTP GET /api/hostels/1/bills/BILL-2026-001 responded 404 in 6.2647 ms
+2026-09-25 22:24:59.762 +05:30 [INF] HTTP GET /api/hostels/1/bills/1 responded 200 in 598.9788 ms
+2026-09-25 22:30:51.342 +05:30 [INF] Application is shutting down...
+2026-09-25 22:36:07.496 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:36:07.528 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:36:07.529 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:36:07.530 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:36:27.985 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 22:36:51.529 +05:30 [INF] Scheduled reminder 1 for bill 1 at "2026-09-26T03:30:00.0000000+00:00"
+2026-09-25 22:36:51.579 +05:30 [INF] HTTP POST /api/hostels/1/reminders responded 201 in 24336.0149 ms
+2026-09-25 22:38:48.285 +05:30 [INF] HTTP GET /api/hostels/1/reminders responded 200 in 4487.5993 ms
+2026-09-25 22:43:02.049 +05:30 [INF] Application is shutting down...
+2026-09-25 22:44:30.660 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:44:30.697 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:44:30.698 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:44:30.699 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:55:05.808 +05:30 [INF] Application is shutting down...
+2026-09-25 22:58:06.759 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 22:58:06.794 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 22:58:06.796 +05:30 [INF] Hosting environment: Development
+2026-09-25 22:58:06.796 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 22:58:38.173 +05:30 [INF] Application is shutting down...
+2026-09-25 23:22:20.578 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:22:20.633 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:22:20.634 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:22:20.635 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:22:52.869 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:22:54.018 +05:30 [ERR] HTTP POST /api/hostels/1/bills/1/razorpay-order responded 500 in 1196.4192 ms
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at HostelManagement.Api.Controllers.RazorpayController.CreateOrder(Int64 hostelId, Int64 billId, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Controllers\RazorpayController.cs:line 36
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 23:22:55.694 +05:30 [INF] Start processing HTTP request POST https://api.razorpay.com/v1/orders
+2026-09-25 23:22:55.708 +05:30 [INF] Sending HTTP request POST https://api.razorpay.com/v1/orders
+2026-09-25 23:22:56.040 +05:30 [INF] Received HTTP response headers after 322.2051ms - 401
+2026-09-25 23:22:56.046 +05:30 [INF] End processing HTTP request after 362.436ms - 401
+2026-09-25 23:22:56.064 +05:30 [ERR] HTTP POST /api/hostels/1/bills/1/razorpay-order responded 500 in 695.9656 ms
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 401 (Unauthorized).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at HostelManagement.Api.Services.RazorpayOrderService.CreateOrder(Int64 amountPaise, String receipt, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Services\RazorpayOrderService.cs:line 95
+   at HostelManagement.Api.Controllers.RazorpayController.CreateOrder(Int64 hostelId, Int64 billId, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Controllers\RazorpayController.cs:line 76
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-09-25 23:22:56.089 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 401 (Unauthorized).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at HostelManagement.Api.Services.RazorpayOrderService.CreateOrder(Int64 amountPaise, String receipt, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Services\RazorpayOrderService.cs:line 95
+   at HostelManagement.Api.Controllers.RazorpayController.CreateOrder(Int64 hostelId, Int64 billId, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Controllers\RazorpayController.cs:line 76
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-09-25 23:29:08.046 +05:30 [INF] Application is shutting down...
+2026-09-25 23:30:03.544 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:30:03.584 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:30:03.586 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:30:03.587 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:31:22.135 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:31:22.680 +05:30 [INF] HTTP GET /api/hostels/{hostelId}/tenants/1/notifications responded 404 in 1813.6467 ms
+2026-09-25 23:31:47.257 +05:30 [INF] HTTP GET /api/hostels/1/tenants/1/notifications responded 200 in 4147.5342 ms
+2026-09-25 23:35:26.809 +05:30 [INF] Application is shutting down...
+2026-09-25 23:36:10.310 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:36:10.348 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:36:10.350 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:36:10.359 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:37:01.230 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:37:02.650 +05:30 [INF] HTTP GET /api/hostels/1/complaints responded 200 in 1472.5159 ms
+2026-09-25 23:37:43.618 +05:30 [INF] Created complaint 1 for tenant 1 in hostel 1
+2026-09-25 23:37:43.638 +05:30 [INF] HTTP POST /api/hostels/1/complaints responded 201 in 822.8506 ms
+2026-09-25 23:37:48.160 +05:30 [INF] HTTP GET /api/hostels/1/complaints responded 200 in 37.2348 ms
+2026-09-25 23:41:31.666 +05:30 [INF] Application is shutting down...
+2026-09-25 23:43:27.091 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:43:27.132 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:43:27.133 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:43:27.135 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:43:32.321 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:43:32.346 +05:30 [INF] HTTP PUT /api/hostels1/attendance/1 responded 404 in 84.0501 ms
+2026-09-25 23:43:34.991 +05:30 [INF] HTTP PUT /api/hostels1/attendance/1 responded 404 in 2.8768 ms
+2026-09-25 23:43:46.596 +05:30 [INF] Saved attendance for tenant 1 on "2026-09-25": Present
+2026-09-25 23:43:46.676 +05:30 [INF] HTTP PUT /api/hostels/1/attendance/1 responded 200 in 2028.1911 ms
+2026-09-25 23:46:09.076 +05:30 [INF] Application is shutting down...
+2026-09-25 23:46:27.798 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:46:27.844 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:46:27.847 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:46:27.850 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:47:28.428 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:47:28.448 +05:30 [INF] HTTP GET //api/hostels/1/reports/summary responded 404 in 89.8976 ms
+2026-09-25 23:47:41.413 +05:30 [INF] HTTP GET /api/hostels/1/reports/summary responded 200 in 2493.5874 ms
+2026-09-25 23:53:11.715 +05:30 [INF] Application is shutting down...
+2026-09-25 23:53:23.169 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:53:23.212 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:53:23.213 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:53:23.214 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:53:38.538 +05:30 [INF] Application is shutting down...
+2026-09-25 23:54:14.719 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-25 23:54:14.764 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 23:54:14.766 +05:30 [INF] Hosting environment: Development
+2026-09-25 23:54:14.768 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-25 23:55:13.092 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-25 23:55:13.111 +05:30 [INF] HTTP POST //api/hostels/1/settings/billingDefaults responded 404 in 76.5340 ms
+2026-09-25 23:55:19.108 +05:30 [INF] HTTP POST /api/hostels/1/settings/billingDefaults responded 405 in 3.4775 ms
+2026-09-25 23:55:42.122 +05:30 [INF] HTTP POST /api/hostels/1/settings/billingDefaults responded 405 in 1.7340 ms
+2026-09-25 23:56:18.478 +05:30 [INF] Saved setting billingDefaults for hostel 1
+2026-09-25 23:56:18.563 +05:30 [INF] HTTP PUT /api/hostels/1/settings/billingDefaults responded 200 in 16438.9759 ms
+2026-09-25 23:56:50.721 +05:30 [INF] HTTP GET /api/hostels/1/settings/billingDefaults responded 405 in 13.1092 ms
+2026-09-25 23:57:01.219 +05:30 [INF] HTTP GET /api/hostels/1/settings responded 200 in 162.8124 ms
+2026-09-25 23:58:31.628 +05:30 [INF] Application is shutting down...
