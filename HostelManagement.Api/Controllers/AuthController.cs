@@ -95,11 +95,12 @@ public class AuthController : ControllerBase
         return Ok(CreateToken(user, request.HostelId, adminRole.Name));
     }
 
+
     [AllowAnonymous]
     [HttpPost("login")]
     public async Task<IActionResult> Login(
-        LoginRequest request,
-        CancellationToken cancellationToken)
+    LoginRequest request,
+    CancellationToken cancellationToken)
     {
         var email = request.Email.Trim().ToLowerInvariant();
 
@@ -116,45 +117,44 @@ public class AuthController : ControllerBase
             return Unauthorized(new { message = "Invalid email or password." });
         }
 
-        var staffMembership = await (
+        if (string.Equals(request.Role, "Tenant", StringComparison.OrdinalIgnoreCase))
+        {
+            var tenantId = await _db.Tenants
+                .AsNoTracking()
+                .Where(t =>
+                    t.UserId == user.Id &&
+                    t.HostelId == request.HostelId &&
+                    t.IsActive)
+                .Select(t => (long?)t.Id)
+                .FirstOrDefaultAsync(cancellationToken);
+
+            if (tenantId is null)
+                return Unauthorized(new { message = "No tenant access to that hostel." });
+
+            user.LastLoginAt = DateTimeOffset.UtcNow;
+            await _db.SaveChangesAsync(cancellationToken);
+
+            return Ok(CreateToken(user, request.HostelId, "Tenant", tenantId));
+        }
+
+        var membershipRole = await (
             from link in _db.UserHostelRoles
             join role in _db.Roles on link.RoleId equals role.Id
             join hostel in _db.Hostels on link.HostelId equals hostel.Id
             where link.UserId == user.Id
                   && link.HostelId == request.HostelId
                   && hostel.IsActive
+                  && role.Name == request.Role
             select role.Name)
             .FirstOrDefaultAsync(cancellationToken);
 
-        if (staffMembership is not null)
-        {
-            user.LastLoginAt = DateTimeOffset.UtcNow;
-            await _db.SaveChangesAsync(cancellationToken);
-
-            return Ok(CreateToken(user, request.HostelId, staffMembership));
-        }
-
-        var tenantId = await _db.Tenants
-            .AsNoTracking()
-            .Where(t =>
-                t.UserId == user.Id &&
-                t.HostelId == request.HostelId &&
-                t.IsActive)
-            .Select(t => (long?)t.Id)
-            .FirstOrDefaultAsync(cancellationToken);
-
-        if (tenantId is null)
-        {
-            return Unauthorized(new
-            {
-                message = "No access to that hostel."
-            });
-        }
+        if (membershipRole is null)
+            return Unauthorized(new { message = "No access to that hostel with the selected role." });
 
         user.LastLoginAt = DateTimeOffset.UtcNow;
         await _db.SaveChangesAsync(cancellationToken);
 
-        return Ok(CreateToken(user, request.HostelId, "Tenant", tenantId));
+        return Ok(CreateToken(user, request.HostelId, membershipRole));
     }
 
     private object CreateToken(
@@ -232,10 +232,18 @@ public sealed class LoginRequest
 {
     [Required]
     [EmailAddress]
+    [StringLength(254)]
     public string Email { get; set; } = "";
 
     [Required]
+    [StringLength(256, MinimumLength = 1)]
     public string Password { get; set; } = "";
 
+    [Range(1, long.MaxValue)]
     public long HostelId { get; set; }
+
+    [Required]
+    [RegularExpression("^(Admin|Staff|Tenant)$",
+        ErrorMessage = "Role must be Admin, Staff, or Tenant.")]
+    public string Role { get; set; } = "";
 }

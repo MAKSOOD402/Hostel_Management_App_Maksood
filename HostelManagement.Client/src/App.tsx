@@ -18,8 +18,9 @@ import "./hostel.css";
 import OverdueAlertsPage from "./OverdueAlertsPage";
 import HostelProfilePage from "./HostelProfilePage";
 import StaffAccountsPage from "./StaffAccountsPage";
+import HostelAdminsPage from "./HostelAdminsPage";
 
-type Page = DashboardDestination | "settings" | "dashboard" | "hostelProfile"| "staffAccounts";
+type Page = DashboardDestination | "settings" | "dashboard" | "hostelProfile"| "staffAccounts"|"admins";
 
 const pages: { id: Page; label: string }[] = [
   { id: "dashboard", label: "Dashboard" },
@@ -35,6 +36,7 @@ const pages: { id: Page; label: string }[] = [
   { id: "settings", label: "Settings" },
   { id: "hostelProfile", label: "Hostel Profile" },
   { id: "staffAccounts", label: "Staff Accounts" },
+  { id: "admins", label: "Admins" },
   
 ];
 
@@ -111,6 +113,13 @@ function App() {
         );
 case "overdue":
   return <OverdueAlertsPage {...props} />;
+  case "admins":
+  return (
+    <HostelAdminsPage
+      hostelId={session.user.hostelId}
+      accessToken={session.accessToken}
+    />
+  );
   case "hostelProfile":
   return (
     <HostelProfilePage
@@ -128,7 +137,8 @@ const availablePages =
     : pages.filter(
         (page) =>
           page.id !== "settings" &&
-          page.id !== "staffAccounts"
+          page.id !== "staffAccounts" &&
+          page.id !== "admins"
       );
 
   return (

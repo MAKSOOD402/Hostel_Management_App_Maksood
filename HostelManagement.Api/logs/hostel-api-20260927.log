@@ -1,0 +1,380 @@
+2026-09-27 06:54:15.811 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 06:54:15.892 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 06:54:15.895 +05:30 [INF] Hosting environment: Development
+2026-09-27 06:54:15.896 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 06:55:38.827 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 06:55:38.893 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 103.1889 ms
+2026-09-27 06:55:40.048 +05:30 [INF] HTTP POST /api/auth/hostels responded 401 in 1128.7830 ms
+2026-09-27 07:03:16.831 +05:30 [INF] Application is shutting down...
+2026-09-27 07:04:50.212 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 07:04:50.266 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:04:50.267 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:04:50.269 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 07:05:37.507 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 07:05:37.929 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 680.7034 ms
+2026-09-27 07:05:41.706 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 3454.8604 ms
+2026-09-27 07:05:50.677 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 2.3105 ms
+2026-09-27 07:05:51.714 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1030.8101 ms
+2026-09-27 07:05:51.772 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.3704 ms
+2026-09-27 07:05:51.777 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 3.3496 ms
+2026-09-27 07:05:52.231 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 452.7358 ms
+2026-09-27 07:05:52.259 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 26.0606 ms
+2026-09-27 07:05:59.671 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.3639 ms
+2026-09-27 07:05:59.672 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1389 ms
+2026-09-27 07:05:59.672 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0994 ms
+2026-09-27 07:05:59.672 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0602 ms
+2026-09-27 07:05:59.740 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 60.2871 ms
+2026-09-27 07:05:59.746 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.8172 ms
+2026-09-27 07:05:59.827 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 147.9961 ms
+2026-09-27 07:05:59.833 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 3.9308 ms
+2026-09-27 07:06:19.053 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.3682 ms
+2026-09-27 07:06:19.201 +05:30 [INF] Created room 9 in hostel 3
+2026-09-27 07:06:19.210 +05:30 [INF] HTTP POST /api/hostels/3/rooms responded 201 in 151.1599 ms
+2026-09-27 07:06:19.217 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.2049 ms
+2026-09-27 07:06:19.228 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 11.1697 ms
+2026-09-27 07:06:19.230 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 6.6640 ms
+2026-09-27 07:06:30.076 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.2663 ms
+2026-09-27 07:06:30.093 +05:30 [INF] Created room 10 in hostel 3
+2026-09-27 07:06:30.095 +05:30 [INF] HTTP POST /api/hostels/3/rooms responded 201 in 13.6797 ms
+2026-09-27 07:06:30.100 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.2797 ms
+2026-09-27 07:06:30.106 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 6.7239 ms
+2026-09-27 07:06:30.116 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 5.5336 ms
+2026-09-27 07:06:32.573 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.3888 ms
+2026-09-27 07:06:32.573 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.1299 ms
+2026-09-27 07:06:32.607 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 29.0739 ms
+2026-09-27 07:06:32.624 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 15.6461 ms
+2026-09-27 07:06:36.910 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.3044 ms
+2026-09-27 07:06:36.911 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1214 ms
+2026-09-27 07:06:36.911 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.2258 ms
+2026-09-27 07:06:36.912 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0621 ms
+2026-09-27 07:06:36.922 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 5.5609 ms
+2026-09-27 07:06:36.926 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 3.6113 ms
+2026-09-27 07:06:36.928 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.8105 ms
+2026-09-27 07:06:36.935 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 5.9891 ms
+2026-09-27 07:07:04.036 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.2827 ms
+2026-09-27 07:07:04.242 +05:30 [INF] Created tenant 14 for hostel 3
+2026-09-27 07:07:04.281 +05:30 [INF] HTTP POST /api/hostels/3/tenants responded 201 in 239.7025 ms
+2026-09-27 07:07:04.285 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.1380 ms
+2026-09-27 07:07:04.294 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 2.6995 ms
+2026-09-27 07:07:04.296 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 10.3605 ms
+2026-09-27 07:07:08.589 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.2607 ms
+2026-09-27 07:07:08.589 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.2477 ms
+2026-09-27 07:07:08.610 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 15.6469 ms
+2026-09-27 07:07:08.633 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 20.8745 ms
+2026-09-27 07:07:11.527 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.1420 ms
+2026-09-27 07:07:11.527 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0398 ms
+2026-09-27 07:07:11.527 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0213 ms
+2026-09-27 07:07:11.529 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0998 ms
+2026-09-27 07:07:11.543 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 6.9951 ms
+2026-09-27 07:07:11.552 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 6.0352 ms
+2026-09-27 07:07:11.589 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 54.8658 ms
+2026-09-27 07:07:11.594 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 3.5199 ms
+2026-09-27 07:08:07.652 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0996 ms
+2026-09-27 07:08:07.737 +05:30 [INF] Created bill 6 for tenant 14 in hostel 3
+2026-09-27 07:08:07.744 +05:30 [INF] HTTP POST /api/hostels/3/bills responded 201 in 86.7454 ms
+2026-09-27 07:08:07.755 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 6.8528 ms
+2026-09-27 07:08:09.931 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1298 ms
+2026-09-27 07:08:09.932 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0976 ms
+2026-09-27 07:08:09.932 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0427 ms
+2026-09-27 07:08:09.932 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0307 ms
+2026-09-27 07:08:09.946 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 4.5356 ms
+2026-09-27 07:08:09.946 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 6.1720 ms
+2026-09-27 07:08:09.954 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 4.3221 ms
+2026-09-27 07:08:09.959 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.7542 ms
+2026-09-27 07:08:11.303 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 2.5138 ms
+2026-09-27 07:08:11.303 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.4179 ms
+2026-09-27 07:08:11.307 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.8083 ms
+2026-09-27 07:08:11.307 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 2.7718 ms
+2026-09-27 07:08:15.745 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.1692 ms
+2026-09-27 07:08:15.746 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0390 ms
+2026-09-27 07:08:15.746 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0450 ms
+2026-09-27 07:08:15.746 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0339 ms
+2026-09-27 07:08:15.760 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 6.3277 ms
+2026-09-27 07:08:15.771 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.5216 ms
+2026-09-27 07:08:15.818 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 66.4605 ms
+2026-09-27 07:08:15.824 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 4.2692 ms
+2026-09-27 07:08:32.100 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.1859 ms
+2026-09-27 07:08:32.194 +05:30 [INF] Created complaint 4 for tenant 14 in hostel 3
+2026-09-27 07:08:32.205 +05:30 [INF] HTTP POST /api/hostels/3/complaints responded 201 in 100.4137 ms
+2026-09-27 07:08:32.210 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0913 ms
+2026-09-27 07:08:32.219 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 9.2871 ms
+2026-09-27 07:08:32.221 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.8779 ms
+2026-09-27 07:08:34.846 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0522 ms
+2026-09-27 07:08:34.849 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.3175 ms
+2026-09-27 07:08:34.861 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 9.9471 ms
+2026-09-27 07:08:36.655 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0505 ms
+2026-09-27 07:08:36.659 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.5134 ms
+2026-09-27 07:08:36.665 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 3.5076 ms
+2026-09-27 07:08:37.619 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0694 ms
+2026-09-27 07:08:37.619 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0391 ms
+2026-09-27 07:08:37.627 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 4.1619 ms
+2026-09-27 07:08:37.630 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.8669 ms
+2026-09-27 07:08:38.186 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0527 ms
+2026-09-27 07:08:38.191 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.9198 ms
+2026-09-27 07:08:38.197 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 5.4476 ms
+2026-09-27 07:08:40.028 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0658 ms
+2026-09-27 07:08:40.028 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0530 ms
+2026-09-27 07:08:40.031 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.8458 ms
+2026-09-27 07:08:40.036 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 2.7705 ms
+2026-09-27 07:08:40.036 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 2.9320 ms
+2026-09-27 07:08:40.042 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 4.0627 ms
+2026-09-27 07:08:42.324 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.1016 ms
+2026-09-27 07:08:42.325 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0708 ms
+2026-09-27 07:08:42.329 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.8514 ms
+2026-09-27 07:08:42.334 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 4.3447 ms
+2026-09-27 07:08:42.335 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.5502 ms
+2026-09-27 07:08:42.343 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 5.2376 ms
+2026-09-27 07:08:43.432 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0678 ms
+2026-09-27 07:08:43.433 +05:30 [INF] HTTP OPTIONS /api/hostels/3/attendance responded 204 in 0.0406 ms
+2026-09-27 07:08:43.433 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0152 ms
+2026-09-27 07:08:43.433 +05:30 [INF] HTTP OPTIONS /api/hostels/3/attendance responded 204 in 0.0339 ms
+2026-09-27 07:08:43.440 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.8312 ms
+2026-09-27 07:08:43.447 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.7806 ms
+2026-09-27 07:08:43.483 +05:30 [INF] HTTP GET /api/hostels/3/attendance responded 200 in 42.9633 ms
+2026-09-27 07:08:43.490 +05:30 [INF] HTTP GET /api/hostels/3/attendance responded 200 in 4.7272 ms
+2026-09-27 07:08:49.043 +05:30 [INF] HTTP OPTIONS /api/hostels/3/attendance/14 responded 204 in 0.0865 ms
+2026-09-27 07:08:49.119 +05:30 [INF] Saved attendance for tenant 14 on "2026-09-27": Present
+2026-09-27 07:08:49.127 +05:30 [INF] HTTP PUT /api/hostels/3/attendance/14 responded 200 in 78.4350 ms
+2026-09-27 07:08:53.284 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.1319 ms
+2026-09-27 07:08:53.285 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0871 ms
+2026-09-27 07:08:53.285 +05:30 [INF] HTTP OPTIONS /api/hostels/3/complaints responded 204 in 0.0352 ms
+2026-09-27 07:08:53.285 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0254 ms
+2026-09-27 07:08:53.295 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 5.1437 ms
+2026-09-27 07:08:53.299 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.9930 ms
+2026-09-27 07:08:53.307 +05:30 [INF] HTTP GET /api/hostels/3/complaints responded 200 in 7.1248 ms
+2026-09-27 07:08:53.315 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.3984 ms
+2026-09-27 07:08:55.207 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.0474 ms
+2026-09-27 07:08:55.213 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.3403 ms
+2026-09-27 07:08:55.225 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants/14/notifications responded 204 in 0.1931 ms
+2026-09-27 07:08:55.289 +05:30 [INF] HTTP GET /api/hostels/3/tenants/14/notifications responded 200 in 58.2140 ms
+2026-09-27 07:08:57.279 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.0803 ms
+2026-09-27 07:08:57.279 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.0425 ms
+2026-09-27 07:08:57.305 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 19.7884 ms
+2026-09-27 07:08:57.320 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 12.4924 ms
+2026-09-27 07:09:02.707 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.0778 ms
+2026-09-27 07:09:02.708 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0546 ms
+2026-09-27 07:09:02.708 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.0293 ms
+2026-09-27 07:09:02.708 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0163 ms
+2026-09-27 07:09:02.721 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 4.6590 ms
+2026-09-27 07:09:02.732 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 3.2062 ms
+2026-09-27 07:09:02.759 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 46.1428 ms
+2026-09-27 07:09:02.763 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 2.0435 ms
+2026-09-27 07:09:03.805 +05:30 [INF] HTTP OPTIONS /api/hostels/3/settings responded 204 in 0.0755 ms
+2026-09-27 07:09:03.805 +05:30 [INF] HTTP OPTIONS /api/hostels/3/settings responded 204 in 0.0262 ms
+2026-09-27 07:09:03.854 +05:30 [INF] HTTP GET /api/hostels/3/settings responded 200 in 43.3965 ms
+2026-09-27 07:09:03.860 +05:30 [INF] HTTP GET /api/hostels/3/settings responded 200 in 3.7035 ms
+2026-09-27 07:09:07.715 +05:30 [INF] HTTP OPTIONS /api/hostels/3 responded 204 in 0.0622 ms
+2026-09-27 07:09:07.716 +05:30 [INF] HTTP OPTIONS /api/hostels/3 responded 204 in 0.0260 ms
+2026-09-27 07:09:07.748 +05:30 [INF] HTTP GET /api/hostels/3 responded 200 in 28.5254 ms
+2026-09-27 07:09:07.751 +05:30 [INF] HTTP GET /api/hostels/3 responded 200 in 1.7329 ms
+2026-09-27 07:09:09.073 +05:30 [INF] HTTP OPTIONS /api/hostels/3/staff-accounts responded 204 in 0.0525 ms
+2026-09-27 07:09:09.073 +05:30 [INF] HTTP OPTIONS /api/hostels/3/staff-accounts responded 204 in 0.0199 ms
+2026-09-27 07:09:09.104 +05:30 [INF] HTTP GET /api/hostels/3/staff-accounts responded 200 in 27.9235 ms
+2026-09-27 07:09:09.114 +05:30 [INF] HTTP GET /api/hostels/3/staff-accounts responded 200 in 7.5970 ms
+2026-09-27 07:09:10.542 +05:30 [INF] HTTP GET /api/hostels/3 responded 200 in 2.3295 ms
+2026-09-27 07:09:10.548 +05:30 [INF] HTTP GET /api/hostels/3 responded 200 in 4.4622 ms
+2026-09-27 07:09:11.518 +05:30 [INF] HTTP GET /api/hostels/3/staff-accounts responded 200 in 1.9574 ms
+2026-09-27 07:09:11.522 +05:30 [INF] HTTP GET /api/hostels/3/staff-accounts responded 200 in 3.1288 ms
+2026-09-27 07:14:09.230 +05:30 [INF] Application is shutting down...
+2026-09-27 07:14:38.519 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 07:14:38.549 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:14:38.550 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:14:38.551 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 07:15:09.774 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 07:15:09.821 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 71.5748 ms
+2026-09-27 07:15:10.174 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 330.6745 ms
+2026-09-27 07:15:16.844 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 1.6194 ms
+2026-09-27 07:15:17.059 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 210.5878 ms
+2026-09-27 07:15:17.078 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.4066 ms
+2026-09-27 07:15:17.082 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 2.5652 ms
+2026-09-27 07:15:17.400 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 318.0067 ms
+2026-09-27 07:15:17.421 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 19.1299 ms
+2026-09-27 07:15:21.125 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.2721 ms
+2026-09-27 07:15:21.126 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1422 ms
+2026-09-27 07:15:21.126 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0733 ms
+2026-09-27 07:15:21.126 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0432 ms
+2026-09-27 07:15:21.167 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 38.0018 ms
+2026-09-27 07:15:21.173 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 3.8172 ms
+2026-09-27 07:15:21.231 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 99.9478 ms
+2026-09-27 07:15:21.238 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 5.6268 ms
+2026-09-27 07:15:22.667 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills/6 responded 204 in 0.3376 ms
+2026-09-27 07:15:22.713 +05:30 [INF] HTTP GET /api/hostels/3/bills/6 responded 200 in 39.7542 ms
+2026-09-27 07:15:53.915 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.2290 ms
+2026-09-27 07:15:53.926 +05:30 [INF] HTTP POST /api/auth/hostels responded 401 in 5.5069 ms
+2026-09-27 07:22:35.243 +05:30 [INF] Application is shutting down...
+2026-09-27 07:32:37.830 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 07:32:37.865 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:32:37.866 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:32:37.867 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 07:32:46.861 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 07:32:46.919 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 76.4619 ms
+2026-09-27 07:32:47.397 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 453.3874 ms
+2026-09-27 07:32:55.109 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 1.5046 ms
+2026-09-27 07:32:55.491 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 377.7092 ms
+2026-09-27 07:32:55.510 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.2417 ms
+2026-09-27 07:32:55.514 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 2.3864 ms
+2026-09-27 07:32:55.853 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 338.1203 ms
+2026-09-27 07:32:55.875 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 20.1636 ms
+2026-09-27 07:32:58.134 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.4121 ms
+2026-09-27 07:32:58.135 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0938 ms
+2026-09-27 07:32:58.135 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0385 ms
+2026-09-27 07:32:58.135 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0495 ms
+2026-09-27 07:32:58.183 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 41.8162 ms
+2026-09-27 07:32:58.189 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 4.7167 ms
+2026-09-27 07:32:58.239 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 98.0320 ms
+2026-09-27 07:32:58.245 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.4773 ms
+2026-09-27 07:33:08.882 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.2695 ms
+2026-09-27 07:33:08.882 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0580 ms
+2026-09-27 07:33:08.882 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.0559 ms
+2026-09-27 07:33:08.882 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0418 ms
+2026-09-27 07:33:08.899 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 11.0675 ms
+2026-09-27 07:33:08.907 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 6.3420 ms
+2026-09-27 07:33:08.930 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 42.1029 ms
+2026-09-27 07:33:08.936 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 4.2287 ms
+2026-09-27 07:33:10.089 +05:30 [INF] HTTP OPTIONS /api/hostels/3/settings responded 204 in 0.2822 ms
+2026-09-27 07:33:10.089 +05:30 [INF] HTTP OPTIONS /api/hostels/3/settings responded 204 in 0.4275 ms
+2026-09-27 07:33:10.130 +05:30 [INF] HTTP GET /api/hostels/3/settings responded 200 in 36.9008 ms
+2026-09-27 07:33:10.136 +05:30 [INF] HTTP GET /api/hostels/3/settings responded 200 in 4.1655 ms
+2026-09-27 07:33:10.809 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 3.7034 ms
+2026-09-27 07:33:10.809 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 3.6982 ms
+2026-09-27 07:33:10.815 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 4.8207 ms
+2026-09-27 07:33:10.815 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 4.9460 ms
+2026-09-27 07:33:19.904 +05:30 [INF] Application is shutting down...
+2026-09-27 07:37:29.522 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 07:37:29.561 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:37:29.562 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:37:29.563 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 07:37:39.596 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 07:37:39.632 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 53.3293 ms
+2026-09-27 07:37:40.078 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 426.8346 ms
+2026-09-27 07:45:59.492 +05:30 [INF] Application is shutting down...
+2026-09-27 07:45:59.679 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 07:45:59.714 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:45:59.716 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:45:59.718 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 07:47:38.541 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 07:47:38.583 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 220.3082 ms
+2026-09-27 07:47:40.089 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 1257.3154 ms
+2026-09-27 07:47:55.157 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 1.9910 ms
+2026-09-27 07:47:55.397 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 235.3243 ms
+2026-09-27 07:48:03.868 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.3420 ms
+2026-09-27 07:48:04.009 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 136.4312 ms
+2026-09-27 07:48:05.083 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.2106 ms
+2026-09-27 07:48:05.442 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 354.8537 ms
+2026-09-27 07:48:05.465 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.2282 ms
+2026-09-27 07:48:05.469 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 1.8134 ms
+2026-09-27 07:48:05.734 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 264.7450 ms
+2026-09-27 07:48:05.754 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 16.3801 ms
+2026-09-27 07:48:09.397 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.2685 ms
+2026-09-27 07:48:09.400 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.2228 ms
+2026-09-27 07:48:09.400 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0798 ms
+2026-09-27 07:48:09.400 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0351 ms
+2026-09-27 07:48:09.446 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 40.7042 ms
+2026-09-27 07:48:09.452 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.0694 ms
+2026-09-27 07:48:09.503 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 97.7345 ms
+2026-09-27 07:48:09.508 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 3.8733 ms
+2026-09-27 07:49:33.364 +05:30 [INF] HTTP OPTIONS /api/hostels/3/admins responded 204 in 0.5204 ms
+2026-09-27 07:49:33.627 +05:30 [INF] Created Admin user 6 for hostel 3
+2026-09-27 07:49:33.634 +05:30 [INF] HTTP POST /api/hostels/3/admins responded 201 in 265.6554 ms
+2026-09-27 07:50:01.954 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.1958 ms
+2026-09-27 07:50:02.102 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 142.9539 ms
+2026-09-27 07:50:03.465 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.1616 ms
+2026-09-27 07:50:03.649 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 179.5545 ms
+2026-09-27 07:50:03.657 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.4508 ms
+2026-09-27 07:50:03.658 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.1883 ms
+2026-09-27 07:50:03.751 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 19.3874 ms
+2026-09-27 07:50:03.768 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 13.4634 ms
+2026-09-27 08:00:19.423 +05:30 [INF] Application is shutting down...
+2026-09-27 08:00:47.719 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 08:00:47.762 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 08:00:47.763 +05:30 [INF] Hosting environment: Development
+2026-09-27 08:00:47.765 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 08:01:08.958 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 08:01:09.219 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 815.5364 ms
+2026-09-27 08:01:12.416 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 2891.8426 ms
+2026-09-27 08:01:14.920 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 1.6812 ms
+2026-09-27 08:01:16.384 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1460.0713 ms
+2026-09-27 08:01:16.530 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.3106 ms
+2026-09-27 08:01:16.533 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 2.0016 ms
+2026-09-27 08:01:17.888 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 1353.6067 ms
+2026-09-27 08:01:17.910 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 18.2715 ms
+2026-09-27 08:01:22.270 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.2958 ms
+2026-09-27 08:01:22.270 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1053 ms
+2026-09-27 08:01:22.271 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0876 ms
+2026-09-27 08:01:22.272 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1188 ms
+2026-09-27 08:01:22.326 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 48.3561 ms
+2026-09-27 08:01:22.332 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.8124 ms
+2026-09-27 08:01:22.381 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 104.9203 ms
+2026-09-27 08:01:22.387 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 5.3519 ms
+2026-09-27 08:01:28.766 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.3058 ms
+2026-09-27 08:01:28.766 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.1253 ms
+2026-09-27 08:01:28.766 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reminders responded 204 in 0.1701 ms
+2026-09-27 08:01:28.766 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0683 ms
+2026-09-27 08:01:28.829 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 53.1894 ms
+2026-09-27 08:01:28.835 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 4.2726 ms
+2026-09-27 08:01:28.836 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 62.4145 ms
+2026-09-27 08:01:28.840 +05:30 [INF] HTTP GET /api/hostels/3/reminders responded 200 in 3.0308 ms
+2026-09-27 08:01:35.508 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.3326 ms
+2026-09-27 08:01:35.508 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.2368 ms
+2026-09-27 08:01:35.530 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 18.0461 ms
+2026-09-27 08:01:35.542 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 11.6124 ms
+2026-09-27 08:01:47.439 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1739 ms
+2026-09-27 08:01:47.439 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.1344 ms
+2026-09-27 08:01:47.440 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1246 ms
+2026-09-27 08:01:47.440 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0869 ms
+2026-09-27 08:01:47.448 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 3.5048 ms
+2026-09-27 08:01:47.448 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 5.1753 ms
+2026-09-27 08:01:47.454 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 3.5205 ms
+2026-09-27 08:01:47.454 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.5205 ms
+2026-09-27 08:01:53.482 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants/14 responded 204 in 0.4722 ms
+2026-09-27 08:01:53.508 +05:30 [INF] HTTP GET /api/hostels/3/tenants/14 responded 200 in 20.6045 ms
+2026-09-27 08:01:53.511 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.1259 ms
+2026-09-27 08:01:53.519 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 4.0662 ms
+2026-09-27 08:02:08.602 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants/14 responded 204 in 0.1139 ms
+2026-09-27 08:02:08.609 +05:30 [INF] HTTP GET /api/hostels/3/tenants/14 responded 200 in 2.9422 ms
+2026-09-27 08:02:08.622 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.3147 ms
+2026-09-27 08:02:08.628 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 2.1263 ms
+2026-09-27 08:02:37.803 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.1305 ms
+2026-09-27 08:02:37.804 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.0788 ms
+2026-09-27 08:02:37.822 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 14.9000 ms
+2026-09-27 08:02:37.837 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 12.7932 ms
+2026-09-27 08:03:52.707 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.2341 ms
+2026-09-27 08:03:52.801 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 88.6392 ms
+2026-09-27 08:03:53.873 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.0702 ms
+2026-09-27 08:03:53.986 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 109.0037 ms
+2026-09-27 08:03:53.995 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.1396 ms
+2026-09-27 08:03:53.995 +05:30 [INF] HTTP OPTIONS /api/hostels/3/reports/summary responded 204 in 0.0620 ms
+2026-09-27 08:03:54.010 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 9.8959 ms
+2026-09-27 08:03:54.024 +05:30 [INF] HTTP GET /api/hostels/3/reports/summary responded 200 in 10.7575 ms
+2026-09-27 08:03:58.955 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.1988 ms
+2026-09-27 08:03:58.956 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0809 ms
+2026-09-27 08:03:58.956 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants responded 204 in 0.0479 ms
+2026-09-27 08:03:58.957 +05:30 [INF] HTTP OPTIONS /api/hostels/3/rooms responded 204 in 0.0408 ms
+2026-09-27 08:03:58.967 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 2.7824 ms
+2026-09-27 08:03:58.967 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 3.7807 ms
+2026-09-27 08:03:58.973 +05:30 [INF] HTTP GET /api/hostels/3/rooms responded 200 in 4.3519 ms
+2026-09-27 08:03:58.973 +05:30 [INF] HTTP GET /api/hostels/3/tenants responded 200 in 4.3796 ms
+2026-09-27 08:05:05.411 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants/14/account responded 204 in 0.4258 ms
+2026-09-27 08:05:05.699 +05:30 [INF] Created user account 7 for tenant 14 in hostel 3
+2026-09-27 08:05:05.707 +05:30 [INF] HTTP POST /api/hostels/3/tenants/14/account responded 201 in 292.4398 ms
+2026-09-27 08:05:14.649 +05:30 [INF] HTTP OPTIONS /api/hostels/3/tenants/14 responded 204 in 0.3169 ms
+2026-09-27 08:05:14.808 +05:30 [INF] HTTP GET /api/hostels/3/tenants/14 responded 200 in 58.8303 ms
+2026-09-27 08:05:14.813 +05:30 [INF] HTTP OPTIONS /api/hostels/3/bills responded 204 in 0.0576 ms
+2026-09-27 08:05:14.873 +05:30 [INF] HTTP GET /api/hostels/3/bills responded 200 in 57.1475 ms
+2026-09-27 08:05:37.306 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.0734 ms
+2026-09-27 08:05:37.413 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 104.2112 ms
+2026-09-27 08:05:38.521 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.0502 ms
+2026-09-27 08:05:38.824 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 298.9930 ms
+2026-09-27 08:05:38.840 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/bills responded 204 in 0.2252 ms
+2026-09-27 08:05:38.843 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/notifications responded 204 in 1.5014 ms
+2026-09-27 08:05:38.843 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/complaints responded 204 in 1.6477 ms
+2026-09-27 08:05:38.843 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/bills responded 204 in 1.4248 ms
+2026-09-27 08:05:38.847 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/complaints responded 204 in 0.0745 ms
+2026-09-27 08:05:38.848 +05:30 [INF] HTTP OPTIONS /api/tenant-portal/notifications responded 204 in 0.7621 ms
+2026-09-27 08:05:39.174 +05:30 [INF] HTTP GET /api/tenant-portal/bills responded 200 in 326.6114 ms
+2026-09-27 08:05:39.179 +05:30 [INF] HTTP GET /api/tenant-portal/bills responded 200 in 3.0623 ms
+2026-09-27 08:05:39.342 +05:30 [INF] HTTP GET /api/tenant-portal/notifications responded 200 in 492.9734 ms
+2026-09-27 08:05:39.346 +05:30 [INF] HTTP GET /api/tenant-portal/notifications responded 200 in 2.7022 ms
+2026-09-27 08:05:39.516 +05:30 [INF] HTTP GET /api/tenant-portal/complaints responded 200 in 645.6217 ms
+2026-09-27 08:05:39.522 +05:30 [INF] HTTP GET /api/tenant-portal/complaints responded 200 in 4.0296 ms
+2026-09-27 08:06:12.621 +05:30 [INF] Application is shutting down...

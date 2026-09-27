@@ -92,6 +92,11 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
+if (app.Configuration.GetValue<bool>("BootstrapAdmin:Enabled"))
+{
+    await BootstrapAdminSeeder.SeedAsync(app.Services, app.Configuration);
+}
+
 app.UseSerilogRequestLogging();
 
 if (app.Environment.IsDevelopment())

@@ -2717,3 +2717,477 @@ Npgsql.PostgresException (0x80004005): P0001: Room has no available capacity
 2026-09-26 14:24:05.741 +05:30 [INF] HTTP OPTIONS /api/hostels/1/bills/2 responded 204 in 0.1493 ms
 2026-09-26 14:24:05.757 +05:30 [INF] HTTP GET /api/hostels/1/bills/2 responded 200 in 9.1612 ms
 2026-09-26 14:24:17.921 +05:30 [INF] Application is shutting down...
+2026-09-26 14:29:55.492 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-26 14:29:55.569 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-26 14:29:55.572 +05:30 [INF] Hosting environment: Development
+2026-09-26 14:29:55.573 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-26 14:29:56.219 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-26 14:29:56.258 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 68.3233 ms
+2026-09-26 14:29:57.311 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 1012.8621 ms
+2026-09-26 14:30:04.138 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 3.7395 ms
+2026-09-26 14:30:04.974 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 821.9112 ms
+2026-09-26 14:32:16.860 +05:30 [WRN] As of ""2026-09-26T09:02:16.7853626+00:00"", the heartbeat has been running for ""00:00:01.1152948"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2026-09-26 14:35:36.326 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 20.4658 ms
+2026-09-26 14:35:36.952 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 609.6912 ms
+2026-09-26 14:36:25.256 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.5437 ms
+2026-09-26 14:36:26.307 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 1043.5865 ms
+2026-09-26 14:36:26.325 +05:30 [INF] HTTP OPTIONS /api/hostels responded 204 in 6.3702 ms
+2026-09-26 14:36:27.095 +05:30 [INF] Created hostel 2 for Admin user 1
+2026-09-26 14:36:27.233 +05:30 [INF] HTTP POST /api/hostels responded 201 in 898.4757 ms
+2026-09-26 14:36:27.455 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 213.0620 ms
+2026-09-26 14:36:27.496 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.6174 ms
+2026-09-26 14:36:27.501 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 2.2596 ms
+2026-09-26 14:36:28.078 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 576.1870 ms
+2026-09-26 14:36:28.107 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 27.7168 ms
+2026-09-26 14:36:35.431 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.3268 ms
+2026-09-26 14:36:35.697 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 257.1155 ms
+2026-09-26 14:36:37.677 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.3386 ms
+2026-09-26 14:36:37.978 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 292.8341 ms
+2026-09-26 14:36:37.990 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.3665 ms
+2026-09-26 14:36:37.991 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1352 ms
+2026-09-26 14:36:38.020 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 22.2913 ms
+2026-09-26 14:36:38.042 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 20.5040 ms
+2026-09-26 14:36:41.489 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.2169 ms
+2026-09-26 14:36:41.490 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1926 ms
+2026-09-26 14:36:41.490 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.3448 ms
+2026-09-26 14:36:41.493 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2047 ms
+2026-09-26 14:36:42.142 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 613.5334 ms
+2026-09-26 14:36:42.149 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 5.0351 ms
+2026-09-26 14:36:42.166 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 637.4423 ms
+2026-09-26 14:36:42.174 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.9359 ms
+2026-09-26 14:36:51.714 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 1.2881 ms
+2026-09-26 14:36:51.714 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 1.2883 ms
+2026-09-26 14:36:51.800 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 28.0605 ms
+2026-09-26 14:36:51.816 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 14.7923 ms
+2026-09-26 14:36:54.914 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2537 ms
+2026-09-26 14:36:54.915 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0656 ms
+2026-09-26 14:36:54.915 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1696 ms
+2026-09-26 14:36:54.915 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0618 ms
+2026-09-26 14:36:54.927 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 5.1373 ms
+2026-09-26 14:36:54.934 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 5.0273 ms
+2026-09-26 14:36:55.531 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 600.5324 ms
+2026-09-26 14:36:55.538 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.7300 ms
+2026-09-26 14:37:15.231 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2265 ms
+2026-09-26 14:37:15.437 +05:30 [INF] Created room 5 in hostel 2
+2026-09-26 14:37:15.447 +05:30 [INF] HTTP POST /api/hostels/2/rooms responded 201 in 210.2517 ms
+2026-09-26 14:37:15.452 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.2939 ms
+2026-09-26 14:37:15.462 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.0851 ms
+2026-09-26 14:37:15.466 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 12.4420 ms
+2026-09-26 14:37:24.422 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.1912 ms
+2026-09-26 14:37:24.445 +05:30 [INF] Created room 6 in hostel 2
+2026-09-26 14:37:24.448 +05:30 [INF] HTTP POST /api/hostels/2/rooms responded 201 in 18.7304 ms
+2026-09-26 14:37:24.452 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0972 ms
+2026-09-26 14:37:24.457 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 4.6975 ms
+2026-09-26 14:37:24.471 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.7350 ms
+2026-09-26 14:37:32.639 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2200 ms
+2026-09-26 14:37:32.660 +05:30 [INF] Created room 7 in hostel 2
+2026-09-26 14:37:32.672 +05:30 [INF] HTTP POST /api/hostels/2/rooms responded 201 in 24.9910 ms
+2026-09-26 14:37:32.677 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1039 ms
+2026-09-26 14:37:32.681 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.9585 ms
+2026-09-26 14:37:32.690 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.8939 ms
+2026-09-26 14:37:43.103 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.6693 ms
+2026-09-26 14:37:43.127 +05:30 [INF] Created room 8 in hostel 2
+2026-09-26 14:37:43.139 +05:30 [INF] HTTP POST /api/hostels/2/rooms responded 201 in 23.5699 ms
+2026-09-26 14:37:43.144 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1247 ms
+2026-09-26 14:37:43.148 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.9523 ms
+2026-09-26 14:37:43.155 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.3567 ms
+2026-09-26 14:37:45.431 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1056 ms
+2026-09-26 14:37:45.431 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1667 ms
+2026-09-26 14:37:45.469 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 30.4343 ms
+2026-09-26 14:37:45.488 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 16.5385 ms
+2026-09-26 14:37:57.628 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1593 ms
+2026-09-26 14:37:57.629 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.1407 ms
+2026-09-26 14:37:57.629 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0466 ms
+2026-09-26 14:37:57.630 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0344 ms
+2026-09-26 14:37:57.640 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.4742 ms
+2026-09-26 14:37:57.645 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 6.5940 ms
+2026-09-26 14:37:57.647 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.7912 ms
+2026-09-26 14:37:57.652 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 4.7948 ms
+2026-09-26 14:38:30.759 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.5695 ms
+2026-09-26 14:38:31.142 +05:30 [INF] Created tenant 12 for hostel 2
+2026-09-26 14:38:31.157 +05:30 [INF] HTTP POST /api/hostels/2/tenants responded 201 in 392.6271 ms
+2026-09-26 14:38:31.162 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0788 ms
+2026-09-26 14:38:31.176 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 4.6332 ms
+2026-09-26 14:38:31.178 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 11.4344 ms
+2026-09-26 14:38:33.991 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1749 ms
+2026-09-26 14:38:33.991 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0330 ms
+2026-09-26 14:38:34.022 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 25.1677 ms
+2026-09-26 14:38:34.040 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 15.8953 ms
+2026-09-26 14:38:44.878 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0756 ms
+2026-09-26 14:38:44.879 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.1343 ms
+2026-09-26 14:38:44.879 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0845 ms
+2026-09-26 14:38:44.880 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0467 ms
+2026-09-26 14:38:44.891 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.0375 ms
+2026-09-26 14:38:44.894 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 4.4385 ms
+2026-09-26 14:38:44.898 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.8908 ms
+2026-09-26 14:38:44.905 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 6.6224 ms
+2026-09-26 14:39:22.670 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1451 ms
+2026-09-26 14:39:22.704 +05:30 [INF] Created tenant 13 for hostel 2
+2026-09-26 14:39:22.708 +05:30 [INF] HTTP POST /api/hostels/2/tenants responded 201 in 31.4101 ms
+2026-09-26 14:39:22.711 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0644 ms
+2026-09-26 14:39:22.716 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.7609 ms
+2026-09-26 14:39:22.725 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.4857 ms
+2026-09-26 14:39:24.606 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0831 ms
+2026-09-26 14:39:24.607 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0275 ms
+2026-09-26 14:39:24.637 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 25.3392 ms
+2026-09-26 14:39:24.656 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 16.9414 ms
+2026-09-26 14:39:31.568 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0664 ms
+2026-09-26 14:39:31.571 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0850 ms
+2026-09-26 14:39:31.571 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1412 ms
+2026-09-26 14:39:31.572 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0274 ms
+2026-09-26 14:39:31.591 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 10.4618 ms
+2026-09-26 14:39:31.605 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.5807 ms
+2026-09-26 14:39:31.651 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 75.6823 ms
+2026-09-26 14:39:31.655 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.4608 ms
+2026-09-26 14:40:37.016 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1123 ms
+2026-09-26 14:40:37.392 +05:30 [INF] Created bill 3 for tenant 12 in hostel 2
+2026-09-26 14:40:37.400 +05:30 [INF] HTTP POST /api/hostels/2/bills responded 201 in 378.0947 ms
+2026-09-26 14:40:37.417 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 13.2257 ms
+2026-09-26 14:41:42.663 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1657 ms
+2026-09-26 14:41:42.676 +05:30 [INF] Created bill 4 for tenant 13 in hostel 2
+2026-09-26 14:41:42.689 +05:30 [INF] HTTP POST /api/hostels/2/bills responded 201 in 20.7429 ms
+2026-09-26 14:41:42.698 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.9307 ms
+2026-09-26 14:41:46.959 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1432 ms
+2026-09-26 14:41:46.960 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1160 ms
+2026-09-26 14:41:46.985 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 19.6767 ms
+2026-09-26 14:41:47.003 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 16.4231 ms
+2026-09-26 14:41:54.318 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1206 ms
+2026-09-26 14:41:54.320 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0532 ms
+2026-09-26 14:41:54.320 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0237 ms
+2026-09-26 14:41:54.320 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0533 ms
+2026-09-26 14:41:54.330 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 4.8117 ms
+2026-09-26 14:41:54.335 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 7.4789 ms
+2026-09-26 14:41:54.347 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.3562 ms
+2026-09-26 14:41:54.465 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 133.8977 ms
+2026-09-26 14:41:57.269 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/3 responded 204 in 0.1159 ms
+2026-09-26 14:41:57.350 +05:30 [INF] HTTP GET /api/hostels/2/bills/3 responded 200 in 73.4239 ms
+2026-09-26 14:42:24.878 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/3/manual-payments responded 204 in 0.2681 ms
+2026-09-26 14:42:24.966 +05:30 [INF] Recorded manual payment 2 of 10240 for bill 3 in hostel 2 using UPI
+2026-09-26 14:42:24.977 +05:30 [INF] HTTP POST /api/hostels/2/bills/3/manual-payments responded 200 in 92.2848 ms
+2026-09-26 14:42:24.983 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0641 ms
+2026-09-26 14:42:24.997 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 4.2992 ms
+2026-09-26 14:42:30.101 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0983 ms
+2026-09-26 14:42:30.102 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0633 ms
+2026-09-26 14:42:30.146 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 38.5999 ms
+2026-09-26 14:42:30.163 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 14.8856 ms
+2026-09-26 14:42:40.831 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.4199 ms
+2026-09-26 14:42:40.831 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0393 ms
+2026-09-26 14:42:40.832 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0986 ms
+2026-09-26 14:42:40.832 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0295 ms
+2026-09-26 14:42:40.843 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 4.5023 ms
+2026-09-26 14:42:40.845 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.1135 ms
+2026-09-26 14:42:40.850 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 5.0405 ms
+2026-09-26 14:42:40.858 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.3273 ms
+2026-09-26 14:42:49.489 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.8199 ms
+2026-09-26 14:42:49.490 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0572 ms
+2026-09-26 14:42:49.518 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 21.3482 ms
+2026-09-26 14:42:49.550 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 29.2723 ms
+2026-09-26 14:42:52.677 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.1415 ms
+2026-09-26 14:42:52.677 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1729 ms
+2026-09-26 14:42:52.677 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0185 ms
+2026-09-26 14:42:52.677 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.2477 ms
+2026-09-26 14:42:52.726 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 7.2252 ms
+2026-09-26 14:42:52.736 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.4704 ms
+2026-09-26 14:42:52.809 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 108.4393 ms
+2026-09-26 14:42:52.819 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 6.2015 ms
+2026-09-26 14:43:13.318 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.1963 ms
+2026-09-26 14:43:13.483 +05:30 [INF] Created complaint 3 for tenant 12 in hostel 2
+2026-09-26 14:43:13.498 +05:30 [INF] HTTP POST /api/hostels/2/complaints responded 201 in 171.1848 ms
+2026-09-26 14:43:13.504 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1139 ms
+2026-09-26 14:43:13.518 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.2803 ms
+2026-09-26 14:43:13.520 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 16.3711 ms
+2026-09-26 14:43:19.413 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints/3/status responded 204 in 0.0792 ms
+2026-09-26 14:43:19.538 +05:30 [INF] Changed complaint 3 status to Resolved
+2026-09-26 14:43:19.645 +05:30 [INF] HTTP PATCH /api/hostels/2/complaints/3/status responded 200 in 189.7766 ms
+2026-09-26 14:43:19.647 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.1139 ms
+2026-09-26 14:43:19.649 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.4895 ms
+2026-09-26 14:43:19.662 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 5.5681 ms
+2026-09-26 14:43:19.662 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.7107 ms
+2026-09-26 14:43:23.191 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0789 ms
+2026-09-26 14:43:23.192 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0460 ms
+2026-09-26 14:43:23.215 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 18.5244 ms
+2026-09-26 14:43:23.243 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 16.7015 ms
+2026-09-26 14:43:30.224 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1032 ms
+2026-09-26 14:43:30.225 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0474 ms
+2026-09-26 14:43:30.239 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.3723 ms
+2026-09-26 14:43:30.245 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.6233 ms
+2026-09-26 14:43:37.191 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0791 ms
+2026-09-26 14:43:37.191 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0802 ms
+2026-09-26 14:43:37.216 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 18.2185 ms
+2026-09-26 14:43:37.241 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 22.2967 ms
+2026-09-26 14:43:39.676 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 16.2389 ms
+2026-09-26 14:43:39.693 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 15.2026 ms
+2026-09-26 14:43:52.014 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0846 ms
+2026-09-26 14:43:52.016 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0527 ms
+2026-09-26 14:43:52.017 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0785 ms
+2026-09-26 14:43:52.018 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0439 ms
+2026-09-26 14:43:52.024 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.1332 ms
+2026-09-26 14:43:52.027 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.1924 ms
+2026-09-26 14:43:52.029 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 2.6281 ms
+2026-09-26 14:43:52.037 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.0327 ms
+2026-09-26 14:43:56.760 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance responded 204 in 0.1625 ms
+2026-09-26 14:43:56.761 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance responded 204 in 0.0771 ms
+2026-09-26 14:43:56.764 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.1667 ms
+2026-09-26 14:43:56.770 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.4549 ms
+2026-09-26 14:43:56.844 +05:30 [INF] HTTP GET /api/hostels/2/attendance responded 200 in 78.7305 ms
+2026-09-26 14:43:56.850 +05:30 [INF] HTTP GET /api/hostels/2/attendance responded 200 in 4.4283 ms
+2026-09-26 14:44:08.653 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance/13 responded 204 in 0.1382 ms
+2026-09-26 14:44:08.790 +05:30 [INF] Saved attendance for tenant 13 on "2026-09-26": Absent
+2026-09-26 14:44:08.799 +05:30 [INF] HTTP PUT /api/hostels/2/attendance/13 responded 200 in 138.4032 ms
+2026-09-26 14:44:09.501 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance/12 responded 204 in 0.1359 ms
+2026-09-26 14:44:09.521 +05:30 [INF] Saved attendance for tenant 12 on "2026-09-26": Present
+2026-09-26 14:44:09.530 +05:30 [INF] HTTP PUT /api/hostels/2/attendance/12 responded 200 in 22.9461 ms
+2026-09-26 14:44:13.238 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0711 ms
+2026-09-26 14:44:13.238 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0155 ms
+2026-09-26 14:44:13.251 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.6953 ms
+2026-09-26 14:44:13.256 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.1529 ms
+2026-09-26 14:44:13.264 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants/12/notifications responded 204 in 0.1852 ms
+2026-09-26 14:44:13.356 +05:30 [INF] HTTP GET /api/hostels/2/tenants/12/notifications responded 200 in 71.6473 ms
+2026-09-26 14:44:23.060 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants/12/notifications/3/read responded 204 in 0.1224 ms
+2026-09-26 14:44:23.186 +05:30 [INF] Marked notification 3 read for tenant 12
+2026-09-26 14:44:23.196 +05:30 [INF] HTTP PATCH /api/hostels/2/tenants/12/notifications/3/read responded 200 in 125.7939 ms
+2026-09-26 14:44:29.054 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants/12/notifications responded 204 in 0.0866 ms
+2026-09-26 14:44:29.081 +05:30 [INF] HTTP GET /api/hostels/2/tenants/12/notifications responded 200 in 19.8375 ms
+2026-09-26 14:44:30.221 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants/12/notifications responded 204 in 0.1439 ms
+2026-09-26 14:44:30.232 +05:30 [INF] HTTP GET /api/hostels/2/tenants/12/notifications responded 200 in 4.2796 ms
+2026-09-26 14:44:31.726 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0844 ms
+2026-09-26 14:44:31.727 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0821 ms
+2026-09-26 14:44:31.727 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0332 ms
+2026-09-26 14:44:31.728 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.0209 ms
+2026-09-26 14:44:31.739 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.1742 ms
+2026-09-26 14:44:31.739 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.5045 ms
+2026-09-26 14:44:31.746 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.6513 ms
+2026-09-26 14:44:31.761 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 2.4814 ms
+2026-09-26 14:44:45.565 +05:30 [INF] Application is shutting down...
+2026-09-26 17:35:28.722 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-26 17:35:28.804 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-26 17:35:28.809 +05:30 [INF] Hosting environment: Development
+2026-09-26 17:35:28.810 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-26 17:35:50.637 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-26 17:35:50.688 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 75.4123 ms
+2026-09-26 17:35:51.846 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 1134.3128 ms
+2026-09-26 17:36:03.972 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 2.5518 ms
+2026-09-26 17:36:04.484 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 507.7768 ms
+2026-09-26 17:36:04.522 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.5555 ms
+2026-09-26 17:36:04.526 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 2.2269 ms
+2026-09-26 17:36:04.931 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 402.3430 ms
+2026-09-26 17:36:04.956 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 22.9711 ms
+2026-09-26 17:36:22.454 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.4084 ms
+2026-09-26 17:36:22.454 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.6506 ms
+2026-09-26 17:36:22.454 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 1.0711 ms
+2026-09-26 17:36:22.456 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.1747 ms
+2026-09-26 17:36:22.503 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 41.9901 ms
+2026-09-26 17:36:22.509 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 4.6069 ms
+2026-09-26 17:36:22.566 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 105.4938 ms
+2026-09-26 17:36:22.573 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.4814 ms
+2026-09-26 17:36:42.282 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.4390 ms
+2026-09-26 17:36:42.282 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0780 ms
+2026-09-26 17:36:42.312 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 22.8361 ms
+2026-09-26 17:36:42.330 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 15.5652 ms
+2026-09-26 17:36:47.573 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.2397 ms
+2026-09-26 17:36:47.575 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2379 ms
+2026-09-26 17:36:47.575 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.2170 ms
+2026-09-26 17:36:47.577 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 0.2203 ms
+2026-09-26 17:36:47.595 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 8.5267 ms
+2026-09-26 17:36:47.598 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 12.2041 ms
+2026-09-26 17:36:47.614 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 3.2785 ms
+2026-09-26 17:36:47.614 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.8557 ms
+2026-09-26 17:37:02.691 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.4214 ms
+2026-09-26 17:37:02.691 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.4208 ms
+2026-09-26 17:37:02.721 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 26.0422 ms
+2026-09-26 17:37:02.744 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 21.1844 ms
+2026-09-26 17:37:22.922 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.5113 ms
+2026-09-26 17:37:22.922 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.2210 ms
+2026-09-26 17:37:22.922 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0548 ms
+2026-09-26 17:37:22.922 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0342 ms
+2026-09-26 17:37:22.935 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.6103 ms
+2026-09-26 17:37:22.942 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 4.7035 ms
+2026-09-26 17:37:22.972 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 45.3620 ms
+2026-09-26 17:37:22.976 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 2.6759 ms
+2026-09-26 17:38:17.522 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.5629 ms
+2026-09-26 17:38:17.619 +05:30 [INF] Created bill 5 for tenant 13 in hostel 2
+2026-09-26 17:38:17.658 +05:30 [INF] HTTP POST /api/hostels/2/bills responded 201 in 131.5352 ms
+2026-09-26 17:38:17.668 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 4.8492 ms
+2026-09-26 17:38:26.176 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/4 responded 204 in 0.1611 ms
+2026-09-26 17:38:26.244 +05:30 [INF] HTTP GET /api/hostels/2/bills/4 responded 200 in 61.2830 ms
+2026-09-26 17:39:02.386 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/4/manual-payments responded 204 in 0.2435 ms
+2026-09-26 17:39:02.478 +05:30 [ERR] Failed executing DbCommand (28ms) [Parameters=[p0='?' (DbType = Int64), p1='?' (DbType = Int64), p2='?' (DbType = Decimal), p3='?', p4='?', p5='?', p6='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Value"
+FROM (
+    SELECT record_successful_payment(
+        @p0,
+        @p1,
+        @p2,
+        @p3,
+        @p4,
+        @p5,
+        @p6
+    ) AS "Value"
+) AS s
+LIMIT 2
+2026-09-26 17:39:02.518 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'HostelManagement.Api.Data.HostelDbContext'.
+Npgsql.PostgresException (0x80004005): P0001: Payment amount does not match bill total
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: P0001
+    MessageText: Payment amount does not match bill total
+    Where: PL/pgSQL function record_successful_payment(bigint,bigint,numeric,character varying,character varying,character varying,character varying) line 30 at RAISE
+    File: pl_exec.c
+    Line: 3923
+    Routine: exec_stmt_raise
+Npgsql.PostgresException (0x80004005): P0001: Payment amount does not match bill total
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: P0001
+    MessageText: Payment amount does not match bill total
+    Where: PL/pgSQL function record_successful_payment(bigint,bigint,numeric,character varying,character varying,character varying,character varying) line 30 at RAISE
+    File: pl_exec.c
+    Line: 3923
+    Routine: exec_stmt_raise
+2026-09-26 17:39:02.534 +05:30 [WRN] Could not record manual payment for bill 4
+Npgsql.PostgresException (0x80004005): P0001: Payment amount does not match bill total
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at HostelManagement.Api.Controllers.ManualPaymentsController.Record(Int64 hostelId, Int64 billId, RecordManualPaymentRequest request, CancellationToken cancellationToken) in C:\HostelManagementApp\HostelManagement.Api\Controllers\ManualPaymentsController.cs:line 78
+  Exception data:
+    Severity: ERROR
+    SqlState: P0001
+    MessageText: Payment amount does not match bill total
+    Where: PL/pgSQL function record_successful_payment(bigint,bigint,numeric,character varying,character varying,character varying,character varying) line 30 at RAISE
+    File: pl_exec.c
+    Line: 3923
+    Routine: exec_stmt_raise
+2026-09-26 17:39:02.562 +05:30 [INF] HTTP POST /api/hostels/2/bills/4/manual-payments responded 409 in 172.1290 ms
+2026-09-26 17:39:27.376 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/4/manual-payments responded 204 in 0.1927 ms
+2026-09-26 17:39:27.398 +05:30 [INF] Recorded manual payment 3 of 13240 for bill 4 in hostel 2 using Cash
+2026-09-26 17:39:27.406 +05:30 [INF] HTTP POST /api/hostels/2/bills/4/manual-payments responded 200 in 25.0817 ms
+2026-09-26 17:39:27.414 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1110 ms
+2026-09-26 17:39:27.420 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 2.6443 ms
+2026-09-26 17:39:33.529 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills/4 responded 204 in 0.1798 ms
+2026-09-26 17:39:33.537 +05:30 [INF] HTTP GET /api/hostels/2/bills/4 responded 200 in 3.5452 ms
+2026-09-26 17:39:42.984 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0931 ms
+2026-09-26 17:39:42.986 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0855 ms
+2026-09-26 17:39:43.009 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 19.5958 ms
+2026-09-26 17:39:43.021 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 10.1847 ms
+2026-09-26 17:39:58.313 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.1290 ms
+2026-09-26 17:39:58.315 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0790 ms
+2026-09-26 17:39:58.317 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0890 ms
+2026-09-26 17:39:58.318 +05:30 [INF] HTTP OPTIONS /api/hostels/2/complaints responded 204 in 0.0517 ms
+2026-09-26 17:39:58.331 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.3323 ms
+2026-09-26 17:39:58.336 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.2988 ms
+2026-09-26 17:39:58.371 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 46.4086 ms
+2026-09-26 17:39:58.378 +05:30 [INF] HTTP GET /api/hostels/2/complaints responded 200 in 4.2881 ms
+2026-09-26 17:40:19.298 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.2922 ms
+2026-09-26 17:40:19.298 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0736 ms
+2026-09-26 17:40:19.319 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 17.0167 ms
+2026-09-26 17:40:19.335 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 14.0062 ms
+2026-09-26 17:43:02.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 3.2229 ms
+2026-09-26 17:43:02.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 3.2224 ms
+2026-09-26 17:43:02.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/rooms responded 204 in 3.2222 ms
+2026-09-26 17:43:02.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 3.2189 ms
+2026-09-26 17:43:02.291 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 36.1173 ms
+2026-09-26 17:43:02.300 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 6.7744 ms
+2026-09-26 17:43:02.369 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 115.7384 ms
+2026-09-26 17:43:02.373 +05:30 [INF] HTTP GET /api/hostels/2/rooms responded 200 in 2.8611 ms
+2026-09-26 17:43:36.239 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 1.0657 ms
+2026-09-26 17:43:36.239 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.5196 ms
+2026-09-26 17:43:36.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance responded 204 in 0.0930 ms
+2026-09-26 17:43:36.240 +05:30 [INF] HTTP OPTIONS /api/hostels/2/attendance responded 204 in 0.3233 ms
+2026-09-26 17:43:36.253 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 8.0766 ms
+2026-09-26 17:43:36.264 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 9.6804 ms
+2026-09-26 17:43:36.512 +05:30 [INF] HTTP GET /api/hostels/2/attendance responded 200 in 260.2622 ms
+2026-09-26 17:43:36.518 +05:30 [INF] HTTP GET /api/hostels/2/attendance responded 200 in 5.3141 ms
+2026-09-26 17:43:43.017 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0536 ms
+2026-09-26 17:43:43.018 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants responded 204 in 0.0406 ms
+2026-09-26 17:43:43.025 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 3.3784 ms
+2026-09-26 17:43:43.032 +05:30 [INF] HTTP GET /api/hostels/2/tenants responded 200 in 5.3399 ms
+2026-09-26 17:43:43.048 +05:30 [INF] HTTP OPTIONS /api/hostels/2/tenants/12/notifications responded 204 in 3.4491 ms
+2026-09-26 17:43:43.173 +05:30 [INF] HTTP GET /api/hostels/2/tenants/12/notifications responded 200 in 106.0982 ms
+2026-09-26 17:43:49.155 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0579 ms
+2026-09-26 17:43:49.156 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0449 ms
+2026-09-26 17:43:49.182 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 20.8300 ms
+2026-09-26 17:43:49.197 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 12.9148 ms
+2026-09-26 17:43:51.603 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reminders responded 204 in 0.0649 ms
+2026-09-26 17:43:51.603 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0259 ms
+2026-09-26 17:43:51.603 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reminders responded 204 in 0.0258 ms
+2026-09-26 17:43:51.604 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0171 ms
+2026-09-26 17:43:51.615 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 6.0565 ms
+2026-09-26 17:43:51.621 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.6869 ms
+2026-09-26 17:43:51.645 +05:30 [INF] HTTP GET /api/hostels/2/reminders responded 200 in 39.0660 ms
+2026-09-26 17:43:51.649 +05:30 [INF] HTTP GET /api/hostels/2/reminders responded 200 in 2.4585 ms
+2026-09-26 17:44:06.213 +05:30 [INF] HTTP OPTIONS /api/hostels/2 responded 204 in 0.5254 ms
+2026-09-26 17:44:06.214 +05:30 [INF] HTTP OPTIONS /api/hostels/2 responded 204 in 0.0681 ms
+2026-09-26 17:44:06.903 +05:30 [INF] HTTP GET /api/hostels/2 responded 200 in 606.4600 ms
+2026-09-26 17:44:06.912 +05:30 [INF] HTTP GET /api/hostels/2 responded 200 in 7.3557 ms
+2026-09-26 17:44:09.458 +05:30 [INF] HTTP OPTIONS /api/hostels/2/staff-accounts responded 204 in 0.4433 ms
+2026-09-26 17:44:09.460 +05:30 [INF] HTTP OPTIONS /api/hostels/2/staff-accounts responded 204 in 0.0781 ms
+2026-09-26 17:44:11.755 +05:30 [INF] HTTP GET /api/hostels/2/staff-accounts responded 200 in 2278.9260 ms
+2026-09-26 17:44:11.847 +05:30 [INF] HTTP GET /api/hostels/2/staff-accounts responded 200 in 90.0040 ms
+2026-09-26 17:47:05.587 +05:30 [INF] HTTP OPTIONS /api/hostels/2/settings responded 204 in 0.2542 ms
+2026-09-26 17:47:05.587 +05:30 [INF] HTTP OPTIONS /api/hostels/2/settings responded 204 in 0.2227 ms
+2026-09-26 17:47:05.775 +05:30 [INF] HTTP GET /api/hostels/2/settings responded 200 in 174.3802 ms
+2026-09-26 17:47:05.782 +05:30 [INF] HTTP GET /api/hostels/2/settings responded 200 in 4.6942 ms
+2026-09-26 17:47:11.126 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0210 ms
+2026-09-26 17:47:11.126 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1044 ms
+2026-09-26 17:47:11.168 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 34.1171 ms
+2026-09-26 17:47:11.190 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 19.7354 ms
+2026-09-26 17:47:24.806 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reminders responded 204 in 0.0940 ms
+2026-09-26 17:47:24.807 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.1111 ms
+2026-09-26 17:47:24.810 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reminders responded 204 in 0.0711 ms
+2026-09-26 17:47:24.811 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0966 ms
+2026-09-26 17:47:24.825 +05:30 [INF] HTTP GET /api/hostels/2/reminders responded 200 in 10.1864 ms
+2026-09-26 17:47:24.835 +05:30 [INF] HTTP GET /api/hostels/2/reminders responded 200 in 7.6751 ms
+2026-09-26 17:47:24.842 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 27.3276 ms
+2026-09-26 17:47:24.849 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 5.3304 ms
+2026-09-26 17:47:31.101 +05:30 [INF] HTTP OPTIONS /api/auth/hostels responded 204 in 0.0590 ms
+2026-09-26 17:47:31.222 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 116.4145 ms
+2026-09-26 17:47:36.487 +05:30 [INF] HTTP OPTIONS /api/auth/login responded 204 in 0.2617 ms
+2026-09-26 17:47:36.637 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 145.2493 ms
+2026-09-26 17:47:36.652 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.1147 ms
+2026-09-26 17:47:36.653 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.2416 ms
+2026-09-26 17:47:36.671 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 12.8209 ms
+2026-09-26 17:47:36.688 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 15.1583 ms
+2026-09-26 17:47:38.742 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0592 ms
+2026-09-26 17:47:38.743 +05:30 [INF] HTTP OPTIONS /api/hostels/2/bills responded 204 in 0.0536 ms
+2026-09-26 17:47:38.754 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 6.2294 ms
+2026-09-26 17:47:38.759 +05:30 [INF] HTTP GET /api/hostels/2/bills responded 200 in 3.6111 ms
+2026-09-26 17:48:33.636 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0859 ms
+2026-09-26 17:48:33.636 +05:30 [INF] HTTP OPTIONS /api/hostels/2/reports/summary responded 204 in 0.0198 ms
+2026-09-26 17:48:33.654 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 14.5003 ms
+2026-09-26 17:48:33.667 +05:30 [INF] HTTP GET /api/hostels/2/reports/summary responded 200 in 11.4740 ms
