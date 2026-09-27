@@ -9,7 +9,7 @@ interface ManualPaymentButtonProps {
 }
 
 const apiBaseUrl =
-  import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5204";
+  import.meta.env.VITE_API_BASE_URL ?? "https://hostelmanagementapp-epa5awhmedaxh5au.southindia-01.azurewebsites.net";
 
 const paymentMethods = [
   "Cash",
