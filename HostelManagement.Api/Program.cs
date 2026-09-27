@@ -41,7 +41,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("ReactDevelopment", policy =>
     {
         policy
-            .WithOrigins("https://ashy-water-0f08b8410.6.azurestaticapps.net")
+            .WithOrigins("https://nice-hill-035aad810.1.azurestaticapps.net")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
