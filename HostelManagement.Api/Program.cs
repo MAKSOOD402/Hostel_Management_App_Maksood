@@ -23,13 +23,26 @@ if (string.IsNullOrWhiteSpace(connectionString))
 
 builder.Services.AddDbContext<HostelDbContext>(options =>
     options.UseNpgsql(connectionString));
-
+/*
 builder.Host.UseSerilog((context, services, configuration) =>
 {
     configuration
         .ReadFrom.Configuration(context.Configuration)
         .ReadFrom.Services(services)
         .Enrich.FromLogContext();
+});*/
+
+builder.Host.UseSerilog((context, services, configuration) =>
+{
+configuration
+    .ReadFrom.Configuration(context.Configuration)
+    .ReadFrom.Services(services)
+    .Enrich.FromLogContext();
+
+if (context.HostingEnvironment.IsProduction())
+{
+    configuration.WriteTo.File("/home/LogFiles/hostel-api-.log", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 14, shared: true);
+    }
 });
 
 builder.Services.AddControllers();
@@ -91,7 +104,6 @@ builder.Services.AddAuthorization(options =>
 });
 
 var app = builder.Build();
-
 if (app.Configuration.GetValue<bool>("BootstrapAdmin:Enabled"))
 {
     await BootstrapAdminSeeder.SeedAsync(app.Services, app.Configuration);
