@@ -54,7 +54,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("ReactDevelopment", policy =>
     {
         policy
-            .WithOrigins("https://nice-hill-035aad810.1.azurestaticapps.net")
+            .WithOrigins("https://nice-hill-035aad810.1.azurestaticapps.net","http://localhost:5173")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
