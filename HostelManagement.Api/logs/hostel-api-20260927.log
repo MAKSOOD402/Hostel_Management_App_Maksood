@@ -378,3 +378,28 @@
 2026-09-27 08:05:39.516 +05:30 [INF] HTTP GET /api/tenant-portal/complaints responded 200 in 645.6217 ms
 2026-09-27 08:05:39.522 +05:30 [INF] HTTP GET /api/tenant-portal/complaints responded 200 in 4.0296 ms
 2026-09-27 08:06:12.621 +05:30 [INF] Application is shutting down...
+2026-09-27 19:36:55.285 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 19:36:55.416 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 19:36:55.419 +05:30 [INF] Hosting environment: Development
+2026-09-27 19:36:55.421 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 19:37:33.646 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 19:37:37.880 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 4557.4009 ms
+2026-09-27 19:38:09.033 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 19.1290 ms
+2026-09-27 19:38:21.996 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 41.7710 ms
+2026-09-27 19:38:35.930 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 4.3405 ms
+2026-09-27 19:38:41.275 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 9.6477 ms
+2026-09-27 19:38:45.373 +05:30 [INF] HTTP POST /api/auth/bootstrap-admin responded 409 in 4.1873 ms
+2026-09-27 19:39:42.564 +05:30 [INF] HTTP POST /api/auth/login responded 400 in 336.7359 ms
+2026-09-27 19:40:03.356 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 2620.0071 ms
+2026-09-27 19:46:48.436 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 851.4067 ms
+2026-09-27 20:03:54.668 +05:30 [INF] Application is shutting down...
+2026-09-27 20:15:24.587 +05:30 [INF] Now listening on: http://localhost:5204
+2026-09-27 20:15:24.628 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 20:15:24.629 +05:30 [INF] Hosting environment: Development
+2026-09-27 20:15:24.630 +05:30 [INF] Content root path: C:\HostelManagementApp\HostelManagement.Api
+2026-09-27 20:15:26.943 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-09-27 20:15:27.608 +05:30 [INF] HTTP POST /api/auth/hostels responded 200 in 692.0859 ms
+2026-09-27 20:15:33.443 +05:30 [INF] HTTP POST /api/auth/hostels responded 415 in 63.8301 ms
+2026-09-27 20:15:46.010 +05:30 [INF] HTTP POST /api/auth/hostels responded 400 in 21.4899 ms
+2026-09-27 20:16:43.351 +05:30 [INF] HTTP POST /api/auth/login responded 401 in 137.4308 ms
+2026-09-27 20:17:06.388 +05:30 [INF] HTTP POST /api/auth/login responded 200 in 324.4213 ms
